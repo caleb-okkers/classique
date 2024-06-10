@@ -1,3 +1,4 @@
+
 * {
     color: rgb(35, 14, 3);
     font-size: 18px; 
@@ -390,6 +391,8 @@
 
 
 
+
+
 .card-text {
   margin: 0 0 8px;
 }
@@ -402,3 +405,14 @@
 /*.card-description:hover {
   display: block;
 }*/
+
+.contact-img {
+  width: 100%;
+  
+}
+
+form {
+  color: rgb(111, 48, 15);
+  
+}
+
