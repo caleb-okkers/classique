@@ -81,7 +81,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
                 color: 'Bordeaux',
                 description: 'This bordeaux slim-fit two-piece suit includes a blazer, waistcoat and trousers, made from a blend of 73% polyester, 23% viscose and 4% elastane. The double-breasted blazer features peak lapels, six buttons, functioning buttoned cuffs, a fully lined interior and double vents. Perfect for formal occasions, this suit requires dry cleaning.',
                 price: 9999.99,
-                img_url: "https://raw.githubusercontent.com/caleb-okkers/classiqueOG/main/images/product11.webp"
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/product11.webp"
                          
             },
 
