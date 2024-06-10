@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.classique</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="container">
+      <nav class="navbar  fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-2 logo-text" href="../index.html"
+            >.classique</a
+          >
+          <button
+            class="navbar-toggler nav-button"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html"
+                    >home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">about</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="./products.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    fashion
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">suits</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">essentials</a>
+                    </li>
+                    <!--<li>
+                      <hr class="dropdown-divider" />
+                    </li>-->
+                    <li>
+                      <a class="dropdown-item" href="#">accesories</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./checkout.html">checkout</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./admin.html">admin</a>
+                </li>
+              </ul>
+              
+              <form id="filter-form" class="filter-form">
+                <h5 class="mt-5 mb-4">filter products</h5>
+                <div class="mb-3">
+                  <label for="priceRange" class="form-label filter-label">price range</label>
+                  <input type="range" class="form-range" min="0" max="1000" id="priceRange">
+                </div>
+                <div class="mb-3">
+                  <label class="filter-label mb-3">category</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="category1" value="suits">
+                    <label class="form-check-label" for="category1">suits</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="category2" value="essentials">
+                    <label class="form-check-label" for="category2">essentials</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="category3" value="accessories">
+                    <label class="form-check-label" for="category3">accessories</label>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-outline-success" onclick="applyFilters()">Apply Filters</button>
+              </form>
+              
+              
+            </div>
+  
+          </div>
+        </div>
+      </nav>
+    </header>
+      <section class="container">
+        <div class="container">
+          <div class="row pt-1">
+            
+              <div class="fashion-text">
+                <h5>Fashion</h5>
+              </div>
+            
+          </div>
+          
+        
+          <div class="row">
+            
+              <div class="container-fluid">
+                <form class="d-flex" role="search">
+                  <input class="form-control m-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success m-2" type="submit" id="search">Search</button>
+                  <button class="btn btn-outline-success m-2" type="submit" id="sort">Sort</button>
+                </form>
+              </div>
+          </div>
+          
+          <div class="product-container pt-3" id="catalogue">
+            
+          
+          </div>
+
+        </div> 
+      </section>
+
+      <footer>
+        <p>Copyright &copy; <span id="currentYear"></span> All Rights Reserved.</p>
+      </footer>
+
+    <script src="../script/products.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
