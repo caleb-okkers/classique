@@ -309,7 +309,8 @@
 }
 
 .about-text h5,
-.fashion-text h5 {
+.fashion-text h5,
+.checkout-text {
   font-size: 2rem;
   font-family: "Noto Serif Display", serif;
   font-optical-sizing: auto;
@@ -416,3 +417,18 @@ form {
   
 }
 
+table {
+  width: 100%;
+  padding-bottom: 100px;
+  border: 1px solid rgb(111, 48, 15);
+}
+
+table th {
+  border: 1px solid rgb(111, 48, 15);
+  padding: 5px;
+}
+
+.total {
+  float: right;
+  margin-right: 0;
+}
