@@ -227,14 +227,15 @@ function displayCheckoutItems () {
     let total = 0 
 
     checkoutItems.forEach(item => {
-        tbody.innerHTML += `
-            <tr>
+        const row = document.createElement('tr')
+        row.innerHTML = `
                 <td>${item.id}</td>
                 <td>${item.name}</td>
                 <td>R ${item.price}</td>
                 <td>1</td>
-            </tr>
-        `
+        `;
+        tbody.appendChild(row)
+
         total = parseFloat(item.price)
     })
 
@@ -282,6 +283,8 @@ document.addEventListener('DOMContentLoaded', () => {
     displayProducts(products)
 
     displayCheckoutItems()
+
+    clearCart()
    
 
 })
@@ -293,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //search
 
-search.addEventListener('keyup', () => {
+search.addEventListener('keyup', (event) => {
     try {
         const searchTerm = event.target.value.trim().toLowerCase();
         if (searchTerm.length < 1) {

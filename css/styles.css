@@ -441,7 +441,7 @@ form {
 .checkout-info {
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-variation-settings: "wdth" 100;
   color: rgb(111, 48, 15) !important;
@@ -450,7 +450,7 @@ form {
 .contact-form {
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
