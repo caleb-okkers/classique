@@ -139,11 +139,14 @@
           <div class="row">
             
               <div class="container-fluid">
-                <form class="d-flex" role="search">
-                  <input class="form-control m-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success m-2" type="submit" id="search">Search</button>
-                  <button class="btn btn-outline-success m-2" type="submit" id="sort">Sort</button>
-                </form>
+                <div class="row">
+                  <form class="d-flex justify-content-center" role="search">
+                    <input class="form-control m-2 w-50 h-75" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success m-2" type="submit" id="search">Search</button>
+                    <button class="btn btn-outline-success m-2" type="button" id="sort">Sort by price: highest</button>
+                    <a href="./checkout.html"><div class="btn btn-outline-success m-2">Cart: <span id="counter"></span></div></a>
+                  </form>
+                </div>
               </div>
           </div>
           
