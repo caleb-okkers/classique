@@ -1,3 +1,4 @@
+
 * {
     color: rgb(35, 14, 3);
     font-size: 18px; 
@@ -176,6 +177,12 @@
     background-color: rgb(111, 48, 15) !important;
     color: #fff !important;
     border-color: rgb(111, 48, 15) !important;
+    font-family: "Noto Serif Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: center !important;
     
   }
   
@@ -309,7 +316,8 @@
 
 .about-text h5,
 .fashion-text h5,
-.contact-text {
+.contact-text
+.checkout-text {
   font-size: 2rem;
   font-family: "Noto Serif Display", serif;
   font-optical-sizing: auto;
@@ -391,6 +399,8 @@
 
 
 
+
+
 .card-text {
   margin: 0 0 8px;
 }
@@ -403,3 +413,36 @@
 /*.card-description:hover {
   display: block;
 }*/
+
+.contact-img {
+  width: 100%;
+  
+}
+
+form {
+  color: rgb(111, 48, 15);
+  
+}
+
+table {
+  width: 100%;
+  padding-bottom: 100px;
+  border: 1px solid rgb(111, 48, 15);
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  text-align: center !important;
+  color: rgb(111, 48, 15) !important;
+}
+
+table th {
+  border: 1px solid rgb(111, 48, 15);
+  padding: 5px;
+}
+
+.total {
+  float: right;
+  margin-left: auto;
+}
