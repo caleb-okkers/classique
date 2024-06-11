@@ -21,11 +21,13 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     
   }
 
   footer p {
     color: rgb(111, 48, 15);
+    font-family:Georgia, 'Times New Roman', Times, serif;
   }
   
 
@@ -420,18 +422,38 @@
 }
 
 form {
-  color: rgb(111, 48, 15);
-  
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: rgb(111, 48, 15) !important;
+}
+
+.form-label,
+.contact-info,
+.checkout-info {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: rgb(111, 48, 15) !important;
+}
+
+.form-control {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 table {
   width: 100%;
   padding-bottom: 100px;
   border: 1px solid rgb(111, 48, 15);
-  font-family: "Noto Serif Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+  ont-family:Georgia, 'Times New Roman', Times, serif;
   font-variation-settings: "wdth" 100;
   text-align: center !important;
   color: rgb(111, 48, 15) !important;
@@ -446,3 +468,5 @@ table th {
   float: right;
   margin-left: auto;
 }
+
+

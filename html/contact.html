@@ -122,12 +122,29 @@
                             </form>
                         </div>
                         <div class="container pt-5">
-                          <div class="row">
-                            <div class="col auto">
-                              <i class="fa-sharp fa-solid fa-location-dot fa-bounce fa-3x" style="color: #6f300f;"></i>
+                          
+                          <div class="row py-3">
+                            <div class="col auto px-5">
+                              <i class="fa-sharp fa-solid fa-phone fa-bounce fa-2x" style="color: #6f300f;"></i>
                             </div>
                             <div class="col">
-                              <p>Shop 7223/7225 V & A Waterfront, Cape Town, 8003</p>
+                              <p class="contact-info">021 777 23773</p>
+                            </div>
+                          </div>
+                          <div class="row py-3 d-flex justify-content-center align-items-center">
+                            <div class="col auto px-5">
+                              <i class="fa-sharp fa-solid fa-envelope fa-bounce fa-2x" style="color: #6f300f;"></i>
+                            </div>
+                            <div class="col">
+                              <p class="contact-info">info@classique.com</p>
+                            </div>
+                          </div>
+                          <div class="row py-3">
+                            <div class="col auto px-5">
+                              <i class="fa-sharp fa-solid fa-location-dot fa-bounce fa-2x" style="color: #6f300f;"></i>
+                            </div>
+                            <div class="col d-flex justify-content-center">
+                              <p class="contact-info">Shop 7223/7225 V & A Waterfront, Cape Town, 8003</p>
                             </div>
                           </div>
                         </div>
@@ -147,5 +164,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.querySelector('#currentYear').textContent = new Date().getFullYear()
+    </script>
   </body>
 </html>
