@@ -316,8 +316,8 @@
 
 .about-text h5,
 .fashion-text h5,
-.contact-text
-.checkout-text {
+.contact-text ,
+.checkout-text  {
   font-size: 2rem;
   font-family: "Noto Serif Display", serif;
   font-optical-sizing: auto;
