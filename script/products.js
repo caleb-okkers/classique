@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 //search
 
 search.addEventListener('keyup', () => {
