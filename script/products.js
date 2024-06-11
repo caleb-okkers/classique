@@ -295,16 +295,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 search.addEventListener('keyup', () => {
     try {
-        if (search.value.length < 1) {
+        const searchTerm = event.target.value.trim().toLowerCase();
+        if (searchTerm.length < 1) {
             displayProducts(products)
         }
 
-        let filteredProduct = products.filter(product => 
-            product.name.toLowerCase().includes(search.value.toLowerCase()))
+        let filteredProducts = products.filter(product => 
+            product.name.toLowerCase().includes(searchTerm))
 
-        displayProducts(filteredProduct)
+        displayProducts(filteredProducts)
 
-        if (!filteredProduct.length) throw new Error(`${search.value} was not found`)
+        if (filteredProducts.length === 0) {
+            throw new Error(`${searchTerm} was not found`)
+        }
 
     } catch (e) {
         container.textContent = e.message || 'Please try again later'
