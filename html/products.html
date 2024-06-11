@@ -95,13 +95,13 @@
               </ul>
               
               <form id="filter-form" class="filter-form">
-                <h5 class="mt-5 mb-4">filter products</h5>
-                <div class="mb-3">
+                <h5 class="mt-3 mb-3">filter products</h5>
+                <div class="mb-2">
                   <label for="priceRange" class="form-label filter-label">price range</label>
                   <input type="range" class="form-range" min="0" max="1000" id="priceRange">
                 </div>
                 <div class="mb-3">
-                  <label class="filter-label mb-3">category</label>
+                  <label class="filter-label mb-1">category</label>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="category1" value="suits">
                     <label class="form-check-label" for="category1">suits</label>
@@ -115,7 +115,7 @@
                     <label class="form-check-label" for="category3">accessories</label>
                   </div>
                 </div>
-                <button type="button" class="btn btn-outline-success" onclick="applyFilters()">Apply Filters</button>
+                <button type="button" class="btn btn-outline-success" onclick="applyFilters()">apply filters</button>
               </form>
               
               
@@ -141,7 +141,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <form class="d-flex justify-content-center" role="search">
-                    <input class="form-control m-2 w-50 h-75" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control m-2 w-50 h-75" type="search" placeholder="Search" aria-label="Search" id="search">
                     <button class="btn btn-outline-success m-2" type="submit" id="search">Search</button>
                     <button class="btn btn-outline-success m-2" type="button" id="sort">Sort by price: highest</button>
                     <a href="./checkout.html"><div class="btn btn-outline-success m-2">Cart: <span id="counter"></span></div></a>
