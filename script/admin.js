@@ -16,7 +16,7 @@ function adminContent(args) {
                 <td>${product.color}</td>
                 <td>${product.description}</td>
                 <td>R ${product.price}</td>
-                <td><img src="${product.image}" alt="${product.id}" class="img-thumbnail h-25 w-25"></td>
+                <td><img src="${product.img_url}" alt="${product.id}" class="img-thumbnail h-50 w-50"></td>
                 <td>
                 <div class="d-flex justify-content-around">
                     <button class="btn btn-outline-success me-2" data-bs-toggle="modal" data-bs-target="#updateProduct${product.id}">Update</button>
@@ -37,7 +37,7 @@ function adminContent(args) {
                           <input class="form-control m-2" type="text" placeholder="Enter item color" value="${product.color}" name="admin-color" id="admin-color${product.id}" required>
                           <textarea class="form-control m-2" placeholder="Enter item description" required name="admin-description" id="admin-description${product.id}">${product.description}</textarea>
                           <input class="form-control m-2" type="number" placeholder="Enter item price" value="${product.price}" name="admin-price" id="admin-price${product.id}" required>
-                          <input class="form-control m-2" type="text" placeholder="Enter image URL" value="${product.image}" name="admin-image" id="admin-image${product.id}" required>
+                          <input class="form-control m-2" type="url" placeholder="Enter image URL" value="${product.img_url}" name="admin-img_url" id="admin-img_url${product.id}" required>
                           </div>
                           </form>
                         </div>
@@ -52,6 +52,8 @@ function adminContent(args) {
                 </td>
             </tr>
             `;
+
+            
         });
     } catch (e) {
         tableContent.innerHTML = `
@@ -71,10 +73,12 @@ function UpdateProduct(item, index) {
     try {
         const updatedProduct = {
             id: item.id,
-            productName: document.querySelector(`#admin-name${item.id}`).value,
-            image: document.querySelector(`#admin-image${item.id}`).value,
+            name: document.querySelector(`#admin-name${item.id}`).value,
             category: document.querySelector(`#admin-category${item.id}`).value,
-            amount: parseInt(document.querySelector(`#admin-amount${item.id}`).value, 10)
+            color: document.querySelector(`#admin-color${item.id}`).value,
+            description: document.querySelector(`#admin-description${item.id}`).value,
+            price: parseInt(document.querySelector(`#admin-price${item.id}`).value, 10),
+            img_url: document.querySelector(`#admin-img_url${item.id}`).value
         };
 
         products[index] = updatedProduct;
@@ -119,10 +123,12 @@ adminSavedProduct.addEventListener('click', () => {
     try {
         const newProduct = {
             id: products.length ? products[products.length - 1].id + 1 : 1, // auto increment ID
-            productName: document.querySelector('#addName').value,
-            category: document.querySelector('#addDetail').value,
-            amount: parseInt(document.querySelector('#addAmount').value, 10),
-            image: document.querySelector('#addImage').value
+            name: document.querySelector('#addName').value,
+            category: document.querySelector('#addCategory').value,
+            color: document.querySelector('#addColor').value,
+            description: document.querySelector('#addDescription').value,
+            price: parseInt(document.querySelector('#addPrice').value, 10),
+            img_url: document.querySelector('#addImage').value
         };
 
         products.push(newProduct);
