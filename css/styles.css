@@ -33,6 +33,15 @@
   .home {
     animation: slideFromSide 1s ease-out forwards;
   } */
+
+  @keyframes easeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  .classic-man {
+    animation: easeIn 2s ease-out forwards;
+  }
   
 
   html, body {
@@ -218,6 +227,18 @@
     margin-bottom: 0;
   }
   
+  .total-display {
+    background-color: rgb(29, 29, 29) !important;
+    color: #fff !important;
+    border-color: rgb(29, 29, 29) !important;
+    font-family: "Noto Serif Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: center !important;
+  }
+
   .btn-outline-success {
     background-color: rgb(29, 29, 29) !important;
     color: #fff !important;
@@ -534,4 +555,6 @@ table th {
   color: #fff;
 }
 
-
+#cartTotal {
+  color: #fff;
+}

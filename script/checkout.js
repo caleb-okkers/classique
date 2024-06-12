@@ -3,7 +3,7 @@
 let checkoutItems = localStorage.getItem('checkout') ? JSON.parse(localStorage.getItem('checkout')) : []
 
 function displayCheckoutItems () {
-    const tbody = document.querySelector('table tbody')
+    const tbody = document.querySelector('#tbody')
     const cartTotal = document.querySelector('#cartTotal')
     tbody.innerHTML = ''
 
@@ -26,18 +26,29 @@ function displayCheckoutItems () {
 }
 
 //clearCart
+// function clearCart() {
+//     try {
+//         localStorage.removeItem('checkout')
+//         checkoutItems = []
+//         document.querySelector('#counter').textContent = 0
+//         document.getElementById('cartItems').innerHTML = ''
+//         document.getElementById('cartTotal').textContent = 0.00
+//         displayCheckoutItems()
+
+//     }catch (e) {
+//         alert('Clearing cart unsuccessful')
+//     }
+
+// }
+
 function clearCart() {
-    try {
-        localStorage.removeItem('checkout')
-        checkoutItems = []
-        document.querySelector('#counter').textContent = 0
-        displayCheckoutItems()
-        document.getElementById('cartItems').innerHTML = ''
-        document.getElementById('cartTotal').textContent = 0.00
-
-    }catch (e) {
-        alert('Clearing cart unsuccessful')
-    }
-
+    localStorage.removeItem('checkout');
+    alert('Press "OK" to remove items from your cart');
+    location.reload();
 }
 
+function payNow() {
+    localStorage.removeItem('checkout');
+    alert('Payment Successful');
+    location.reload();
+}
