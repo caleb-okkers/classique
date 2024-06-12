@@ -211,6 +211,7 @@ function addToCart(product){
         localStorage.setItem('checkout', JSON.stringify(checkoutItems))
         document.querySelector('#counter').textContent = 
         checkoutItems.length || 0
+        displayCheckoutItems()
 
     }catch(e) {
         alert("Add to cart unsuccessful")
@@ -284,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     displayCheckoutItems()
 
-    clearCart()
+    // clearCart()
    
 
 })

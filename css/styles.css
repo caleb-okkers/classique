@@ -4,8 +4,13 @@
     font-size: 18px; 
   }
 
+
   section {
     min-height: 100vh;
+  }
+
+  .home {
+    background-image: url();
   }
 
   html, body {
@@ -102,6 +107,7 @@
 
   .offcanvas-title {
     font-weight: 700;
+    color: black !important;
   }
   
   .logo-text {
@@ -115,7 +121,7 @@
     padding-left: 1rem;
   }
   
-  .navbar-brand, .nav-link, .dropdown-item, .offcanvas-title, .btn-close {
+  .navbar-brand, .nav-link, .dropdown-item, .btn-close {
     color: rgb(111, 48, 15) !important;
   }
   
@@ -124,7 +130,8 @@
   }
 
   .dropdown-item:hover {
-    background-color: rgb(111, 48, 15, 0.2) !important;
+    background-color: rgb(29, 29, 29) !important;
+    color: #fff !important;
   }
   
   .dropdown-menu {
@@ -147,6 +154,11 @@
   .filter-label {
     margin-right: 10px;
     color: rgb(111, 48, 15) !important;
+  }
+
+  .filter-form h5 {
+    color: rgb(29, 29, 29);
+    font-weight: 600;
   }
   
   .form-check-label {
@@ -181,7 +193,7 @@
   }
   
   .btn-outline-success {
-    background-color: rgb(111, 48, 15) !important;
+    background-color: rgb(29, 29, 29) !important;
     color: #fff !important;
     border-color: rgb(111, 48, 15) !important;
     font-family: "Noto Serif Display", serif;
@@ -194,9 +206,12 @@
   }
   
   .btn-outline-success:hover {
-    background-color: rgb(111, 48, 15, 0.5) !important;
-    color: rgb(111, 48, 15) !important;
+    background-color: rgb(111, 48, 15) !important;
     border-color: rgb(111, 48, 15) !important;
+  }
+
+  .btn-outline-success:active {
+    background-color: rgb(29, 29, 29);
   }
   
   .form-range {
@@ -384,11 +399,19 @@
 }
 
 .card {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   border: 1px solid rgb(111, 48, 15);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   /*position: relative;*/
+  scale: 0.8;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  transition: 0.5s;
+  transform: scale(1.01);
 }
 
 .card img {
@@ -414,7 +437,8 @@
 }
 
 .card-description{
-  display: none;width: 100%;
+  display: none;
+  width: 100%;
 
 }
 
