@@ -15,6 +15,24 @@
     width: 100%;
   }
 
+
+  @keyframes slideFromTop {
+    0% {transform: translateY(-100%); opacity: 0;}
+    100% {transform: translateY(0%); opacity: 1;}
+  }
+
+  .welcome-text {
+    animation: slideFromTop 1s ease-out forwards;
+  }
+
+  /* @keyframes slideFromSide {
+    0% {transform: translateX(-100%); opacity: 0;}
+    100% {transform: translateX(0%); opacity: 1;}
+  }
+
+  .home {
+    animation: slideFromSide 1s ease-out forwards;
+  } */
   
 
   html, body {
@@ -100,7 +118,7 @@
     margin-right: auto;
   }*/
 
-  .content-nav {
+  .navbar {
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -109,9 +127,9 @@
     background-color: #fff;
   }
 
-  /* .home-nav {
-    background-color: rgba(0, 0, 0, 0.0);
-  } */
+   .home-nav {
+    background-color: transparent !important;
+  }
 
   .offcanvas-title {
     font-weight: 700;
@@ -203,7 +221,7 @@
   .btn-outline-success {
     background-color: rgb(29, 29, 29) !important;
     color: #fff !important;
-    border-color: rgb(111, 48, 15) !important;
+    border-color: rgb(29, 29, 29) !important;
     font-family: "Noto Serif Display", serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -315,15 +333,20 @@
 .welcome-div h5,
 .welcome-div h3 {
   text-align: center;
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
   /*width: 100%;*/
 }
 
+.welcome-title {
+  font-weight: bold;
+}
+
 .welcome-div h5 {
-  font-family: "Noto Serif Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+  
   font-size: 2.5rem;
   color: rgb(111, 48, 15);
 }

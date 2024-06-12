@@ -89,8 +89,16 @@ let products = JSON.parse(localStorage.getItem('products')) ?
     ))
 
 
+let adjectives = ['timeless', 'elegant', 'classic', 'suave', 'desire']
+let currentIndex = 0
 
+function changedAdjective () {
+    const adjectiveElement = document.getElementById('adjective')
+    adjectiveElement.textContent = `Be ${adjectives[currentIndex]}.`
+    currentIndex = (currentIndex + 1) % adjectives.length
+}
 
+setInterval(changedAdjective, 1500)
 
 
 

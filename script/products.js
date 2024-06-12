@@ -211,53 +211,53 @@ function addToCart(product){
         localStorage.setItem('checkout', JSON.stringify(checkoutItems))
         document.querySelector('#counter').textContent = 
         checkoutItems.length || 0
-        displayCheckoutItems()
+        // displayCheckoutItems()
 
     }catch(e) {
         alert("Add to cart unsuccessful")
     }
 }
 
-//displayCheckoutItems
+// //displayCheckoutItems
 
-function displayCheckoutItems () {
-    const tbody = document.querySelector('table tbody')
-    const cartTotal = document.querySelector('#cartTotal')
-    tbody.innerHTML = ''
+// function displayCheckoutItems () {
+//     const tbody = document.querySelector('table tbody')
+//     const cartTotal = document.querySelector('#cartTotal')
+//     tbody.innerHTML = ''
 
-    let total = 0 
+//     let total = 0 
 
-    checkoutItems.forEach(item => {
-        const row = document.createElement('tr')
-        row.innerHTML = `
-                <td>${item.id}</td>
-                <td>${item.name}</td>
-                <td>R ${item.price}</td>
-                <td>1</td>
-        `;
-        tbody.appendChild(row)
+//     checkoutItems.forEach(item => {
+//         const row = document.createElement('tr')
+//         row.innerHTML = `
+//                 <td>${item.id}</td>
+//                 <td>${item.name}</td>
+//                 <td>R ${item.price}</td>
+//                 <td>1</td>
+//         `;
+//         tbody.appendChild(row)
 
-        total = parseFloat(item.price)
-    })
+//         total = parseFloat(item.price)
+//     })
 
-    cartTotal.textContent = total.toFixed(2)
-}
+//     cartTotal.textContent = total.toFixed(2)
+// }
 
-//clearCart
-function clearCart() {
-    try {
-        localStorage.removeItem('checkout')
-        checkoutItems = []
-        document.querySelector('#counter').textContent = 0
-        displayCheckoutItems()
-        document.getElementById('cartItems').innerHTML = ''
-        document.getElementById('cartTotal').textContent = 0.00
+// //clearCart
+// function clearCart() {
+//     try {
+//         localStorage.removeItem('checkout')
+//         checkoutItems = []
+//         document.querySelector('#counter').textContent = 0
+//         displayCheckoutItems()
+//         document.getElementById('cartItems').innerHTML = ''
+//         document.getElementById('cartTotal').textContent = 0.00
 
-    }catch (e) {
-        alert('Clearing cart unsuccessful')
-    }
+//     }catch (e) {
+//         alert('Clearing cart unsuccessful')
+//     }
 
-}
+// }
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     displayProducts(products)
 
-    displayCheckoutItems()
+    // displayCheckoutItems()
 
     // clearCart()
    
