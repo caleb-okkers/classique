@@ -25,14 +25,32 @@
     animation: slideFromTop 1s ease-out forwards;
   }
 
-  /* @keyframes slideFromSide {
+   @keyframes slideFromLeft {
     0% {transform: translateX(-100%); opacity: 0;}
     100% {transform: translateX(0%); opacity: 1;}
   }
 
-  .home {
-    animation: slideFromSide 1s ease-out forwards;
-  } */
+  .slideFromLeft {
+    animation: slideFromLeft 2s ease-out forwards;
+  } 
+
+  @keyframes slideFromRight {
+    0% {transform: translateX(100%); opacity: 0;}
+    100% {transform: translateX(0%); opacity: 1;}
+  }
+
+  .slideFromRight {
+    animation: slideFromRight 2s ease-out forwards;
+  } 
+
+  @keyframes easeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  .classic-man {
+    animation: easeIn 2s ease-out forwards;
+  }
 
   @keyframes easeIn {
     0% {opacity: 0;}
@@ -450,6 +468,11 @@
   gap: 16px;
 }
 
+/* @keyframes easeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+} */
+
 .card {
   font-family: Georgia, 'Times New Roman', Times, serif;
   border: 1px solid rgb(111, 48, 15);
@@ -458,6 +481,7 @@
   overflow: hidden;
   /*position: relative;*/
   scale: 0.8;
+  animation: easeIn 1s ease-out forwards;
 }
 
 .card:hover {
