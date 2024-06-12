@@ -19,12 +19,13 @@ function displayCheckoutItems () {
         `;
         tbody.appendChild(row)
 
-        total = parseFloat(item.price)
+        total += parseFloat(item.price)
     })
 
     cartTotal.textContent = total.toFixed(2)
 }
 displayCheckoutItems()
+
 //clearCart
 // function clearCart() {
 //     try {
