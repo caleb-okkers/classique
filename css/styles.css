@@ -10,8 +10,12 @@
   }
 
   .home {
-    background-image: url();
+    background-image: url(https://raw.githubusercontent.com/caleb-okkers/classique/main/images/home1.webp);
+    object-fit: cover;
+    width: 100%;
   }
+
+  
 
   html, body {
     height: 100%;
@@ -96,7 +100,7 @@
     margin-right: auto;
   }*/
 
-  .navbar {
+  .content-nav {
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -104,6 +108,10 @@
     font-variation-settings: "wdth" 100;
     background-color: #fff;
   }
+
+  /* .home-nav {
+    background-color: rgba(0, 0, 0, 0.0);
+  } */
 
   .offcanvas-title {
     font-weight: 700;
