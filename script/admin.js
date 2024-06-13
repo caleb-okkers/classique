@@ -18,9 +18,9 @@ function adminContent(args) {
                 <td>R ${product.price}</td>
                 <td><img src="${product.img_url}" alt="${product.id}" class="img-thumbnail h-50 w-50"></td>
                 <td>
-                <div class="d-flex justify-content-around">
-                    <button class="btn btn-outline-success me-2" data-bs-toggle="modal" data-bs-target="#updateProduct${product.id}">Update</button>
-                    <button class="btn btn-outline-success ms-2" onclick="deleteProduct(${i})">Delete</button>
+                <div class="">
+                    <button class="btn btn-outline-success ms-2 mb-2" data-bs-toggle="modal" data-bs-target="#updateProduct${product.id}"><span class="text-light">Update</span></button>
+                    <button class="btn btn-outline-success ms-2" onclick="deleteProduct(${i})"><span class="text-light">Delete</span></button>
                     <div class="modal fade" id="updateProduct${product.id}" tabindex="-1" aria-labelledby="updateProduct${product.id}" aria-hidden="true">
                         <div class="modal-dialog">
                         <div class="modal-content">
@@ -42,8 +42,8 @@ function adminContent(args) {
                           </form>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-outline-success" onclick='new UpdateProduct(${JSON.stringify(product)}, ${i})'>Save changes</button>
+                          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal"><span class="text-light">Close</span></button>
+                          <button type="button" class="btn btn-outline-success" onclick='new UpdateProduct(${JSON.stringify(product)}, ${i})'><span class="text-light">Save changes</span></button>
                         </div>
                       </div>
                         </div>
@@ -121,8 +121,10 @@ sortedProducts.addEventListener('click', () => {
 let adminSavedProduct = document.getElementById('saveProduct');
 adminSavedProduct.addEventListener('click', () => {
     try {
+        const newId = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1
+
         const newProduct = {
-            id: products.length ? products[products.length - 1].id + 1 : 1, // auto increment ID
+            id: newId,
             name: document.querySelector('#addName').value,
             category: document.querySelector('#addCategory').value,
             color: document.querySelector('#addColor').value,

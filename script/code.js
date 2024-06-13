@@ -89,7 +89,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
     ))
 
 
-let adjectives = ['timeless', 'elegant', 'classic', 'old fashioned', 'desire', 'suave']
+let adjectives = ['timeless', 'elegant', 'classic', 'old fashioned', 'desire', 'suave', 'like Caleb']
 let currentIndex = 0
 
 function changedAdjective () {
@@ -103,4 +103,15 @@ setInterval(changedAdjective, 1500)
 
 
 
+// document.querySelectorAll('.btn-outline-success').forEach(button => {
+//     button.addEventListener('mouseover', function (e) {
+//         const rect = this.getBoundingClientRect();
+//         const ripple = this.querySelector('::before');
 
+//         const x = e.clientX - rect.left;
+//         const y = e.clientY - rect.top;
+
+//         ripple.style.left = `${x}px`;
+//         ripple.style.top = `${y}px`;
+//     });
+// });
