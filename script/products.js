@@ -21,7 +21,7 @@ function displayProducts(args) {
                         <p class="card-description-toggle">Description <span>+</span></p>
                         <p class="card-text card-description">${product.description}</p>
                         <p class="card-text">R ${product.price}</p>
-                        <button type='button' class="btn btn-outline-success addToCart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
+                        <button type='button' class="btn btn-outline-success addToCart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" onclick='addToCart(${JSON.stringify(product)})'><span class="text-light">Add to cart</span></button>
                     </div>
                 </div>
             
@@ -181,10 +181,10 @@ sorting.addEventListener('click', () => {
 
         if(!descendingOrder) {
             products.sort((a, b) => b.price - a.price)
-            sorting.textContent = 'Sort by price: lowest'
+            sorting.innerHTML = `<span class="text-light">Sorted by price: highest</span>`
         } else {
             products.sort((a, b) => a.price - b.price)
-            sorting.textContent = 'Sort by price: highest'
+            sorting.innerHTML = `<span class="text-light">Sorted by price: lowest</span>`
         }
 
         toggleSortingOrder()

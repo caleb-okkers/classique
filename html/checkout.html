@@ -96,7 +96,7 @@
             <div class="col-12">
               <div>
                 <table>
-                  <thead>
+                  <thead class="checkout-head">
                     <tr>
                       <th>ID</th>
                       <th>Name</th>
@@ -111,10 +111,10 @@
           </div>
           <div class="row d-flex">
             <div class="col-12 d-flex">
-              <button id="clearCartBtn" class="btn btn-outline-success" onclick="clearCart()">Clear Cart</button>
+              <button id="clearCartBtn" class="btn btn-outline-success" onclick="clearCart()"><span class="text-light">Clear Cart</span></button>
               <ul id="cartItems"></ul>
-              <button class="total ml-auto btn total-display me-2">Total: R <span id="cartTotal">0.00</span></button>
-              <button id="payNowBtn" class="btn btn-outline-success" onclick="payNow()">Pay now</button>
+              <div class="total ml-auto total-display btn me-2">Total: R <span id="cartTotal">0.00</span></div>
+              <button id="payNowBtn" class="btn btn-outline-success" onclick="payNow()"><span class="text-light">Pay now</span></button>
             </div>
           </div>
         </div>

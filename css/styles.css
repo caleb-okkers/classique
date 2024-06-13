@@ -30,7 +30,8 @@
     100% {transform: translateX(0%); opacity: 1;}
   }
 
-  .slideFromLeft {
+  .slideFromLeft,
+  .contact-img {
     animation: slideFromLeft 2s ease-out forwards;
   } 
 
@@ -255,9 +256,12 @@
     font-style: normal;
     font-variation-settings: "wdth" 100;
     text-align: center !important;
+    border-radius: 0 !important;
   }
 
   .btn-outline-success {
+    position: relative;
+    overflow: hidden;
     background-color: rgb(29, 29, 29) !important;
     color: #fff !important;
     border-color: rgb(29, 29, 29) !important;
@@ -267,21 +271,45 @@
     font-style: normal;
     font-variation-settings: "wdth" 100;
     text-align: center !important;
-    
-  }
-  
-  .btn-outline-success:hover {
-    background-color: rgb(111, 48, 15) !important;
-    border-color: rgb(111, 48, 15) !important;
-  }
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    border-radius: 0 !important;
+}
 
-  .btn-outline-success:active {
-    background-color: rgb(29, 29, 29);
-  }
+.btn-outline-success::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(111, 48, 15);
+    z-index: 0;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.btn-outline-success:hover::before {
+    transform: scaleX(1);
+    color: #fff !important;
+}
+
+.btn-outline-success:hover {
+    color: #fff !important; /* Ensure text stays visible */
+}
+
+.btn-outline-success {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-outline-success span {
+    position: relative;
+    z-index: 2;
+}
   
-  .form-range {
-    accent-color: rgb(111, 48, 15) !important; /* For the range input thumb color */
-  }
   
   .form-check-input {
     width: 1.25em;
@@ -308,30 +336,7 @@
     box-shadow: none !important;
   }
 
-  input[type=range]::-webkit-slider-thumb {
-    background-color: rgb(111, 48, 15) !important;
-  }
-
-  input[type=range]::-moz-range-thumb {
-    background-color: rgb(111, 48, 15) !important;
-  }
-
-  input[type=range]::-ms-thumb {
-    background-color: rgb(111, 48, 15) !important;
-  }
-
-  input[type=range]::-webkit-slider-thumb:focus {
-    box-shadow: none !important;
-  }
-
-  input[type=range]::-moz-range-thumb:focus {
-    box-shadow: none !important;
-  }
-
-  input[type=range]::-ms-thumb:focus {
-    box-shadow: none !important;
-  }
-
+ 
   .btn-close {
     color: rgb(111, 48, 15) !important;
   }
@@ -454,13 +459,23 @@
 
 .form-control:hover {
   box-shadow: none !important;
-  border: 1px solid rgb(111, 48, 15);
+  border: 1px solid rgb(29, 29, 29) !important;
+  border-radius: 0 !important;
 }
 
 .form-control:focus {
   box-shadow: none !important;
-  border: 1px solid rgb(111, 48, 15);
+  border: 1px solid rgb(29, 29, 29) !important;
+  border-radius: 0 !important;
 }
+
+.form-control {
+  box-shadow: none !important;
+  border: 1px solid rgb(29, 29, 29) !important;
+  border-radius: 0 !important;
+}
+
+
 
 .product-container {
   display: grid;
@@ -476,7 +491,7 @@
 .card {
   font-family: Georgia, 'Times New Roman', Times, serif;
   border: 1px solid rgb(111, 48, 15);
-  border-radius: 8px;
+  border-radius: 0px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   /*position: relative;*/
@@ -493,6 +508,7 @@
 .card img {
   width: 100%;
   height: auto;
+  border-radius: 0px !important;
 }
 
 .card-body {
@@ -558,7 +574,7 @@ form {
 table {
   width: 100%;
   padding-bottom: 100px;
-  border: 1px solid rgb(111, 48, 15);
+  border: 1px solid rgb(29, 29, 29);
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-variation-settings: "wdth" 100;
   text-align: center !important;
@@ -566,8 +582,10 @@ table {
 }
 
 table th {
-  border: 1px solid rgb(111, 48, 15);
+  border: 1px solid rgb(29, 29, 29);
   padding: 5px;
+  background-color: rgb(29, 29, 29);
+  color: #fff;
 }
 
 .total {
