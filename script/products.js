@@ -14,7 +14,7 @@ function displayProducts(args) {
     try {
         args.forEach(product => {
             container.innerHTML += `
-                <div class="card">
+                <div class="card" data-category="${product.category}">
                     <img src="${product.img_url}" class="card-img-top" alt="${product.name}" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>
@@ -194,3 +194,23 @@ sorting.addEventListener('click', () => {
         container.textContent - e.message || 'We are working on this issue'
     }
 })
+
+//filter
+
+function applyFilters() {
+    const selectedCategories = []
+
+    const checkboxes = document.querySelectorAll('.form-check-input')
+
+    checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+            selectedCategories.push(checkbox.value)
+        }
+    })
+
+    const filteredProducts = products.filter(product => {
+        return selectedCategories.length === 0 || selectedCategories.includes(product.category)
+    })
+
+    displayProducts(filteredProducts)
+}
