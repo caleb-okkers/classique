@@ -89,7 +89,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
     ))
 
 
-let adjectives = ['timeless', 'elegant', 'classic', '', 'desire', 'be old fashioned']
+let adjectives = ['timeless', 'elegant', 'classic', 'old fashioned', 'desire', 'suave']
 let currentIndex = 0
 
 function changedAdjective () {
