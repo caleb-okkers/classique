@@ -50,6 +50,6 @@ function clearCart() {
 
 function payNow() {
     localStorage.removeItem('checkout');
-    alert('Payment Successful');
+    alert('Payment successful');
     location.reload();
 }
