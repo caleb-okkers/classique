@@ -44,7 +44,7 @@ function displayProducts(args) {
             })
         }else {
             container.innerHTML = `
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center align-items-center">
                     <div class="spinner-border" role="status"></div>
                     <p>No Products Found</p>
                 </div>
@@ -54,7 +54,12 @@ function displayProducts(args) {
         
 
     } catch (e) {
-        container.textContent = 'Please try again later'
+        container.innerHTML = `
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="spinner-border" role="status"></div>
+                    <p>No Products Found</p>
+                </div>
+        `
     }
 }
 

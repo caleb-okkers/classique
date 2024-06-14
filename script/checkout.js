@@ -25,7 +25,7 @@ function displayCheckoutItems (args) {
         })
     }else {
         tbody.innerHTML = `
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center align-items-center">
             <div class="spinner-border" role="status"></div>
             <p>No Products Found</p>
         </div>

@@ -84,6 +84,116 @@ let products = JSON.parse(localStorage.getItem('products')) ?
                 img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/product11.webp"
                          
             },
+            {
+                id: 10,
+                name: 'White Slim-Fit Shirt',
+                category: 'essentials',
+                color: 'White',
+                description: 'This slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a classic white color. For optimal care, it requires dry cleaning only.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/white%20shirt.webp"
+            },
+            {
+                id: 11,
+                name: 'Navy Slim-Fit Shirt',
+                category: 'essentials',
+                color: 'Navy',
+                description: 'This slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a classic navy color. For optimal care, it requires dry cleaning only.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/navy%20shirt.webp"
+            },
+            {
+                id: 12,
+                name: 'Black Slim-Fit Shirt',
+                category: 'essentials',
+                color: 'Black',
+                description: 'This slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a classic black color. For optimal care, it requires dry cleaning only.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/black%20shirt.webp"
+            },
+            {
+                id: 13,
+                name: 'Camel Slim-Fit Shirt',
+                category: 'essentials',
+                color: 'Camel',
+                description: 'This slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a warm camel color. For optimal care, it requires dry cleaning only.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/camel%20shirt.webp"
+            },
+            {
+                id: 14,
+                name: 'Sky-Blue Slim-Fit Shirt',
+                category: 'essentials',
+                color: 'Sky-Blue',
+                description: 'This slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a soft sky-blue color. For optimal care, it requires dry cleaning only.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/sky-blue%20shirt.webp"
+            },
+            {
+                id: 15,
+                name: 'White Tuxedo Slim-Fit Shirt',
+                category: 'essentials',
+                color: 'White',
+                description: 'This tuxedo slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a classic white color. For optimal care, it requires dry cleaning only.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/white%20shirt%20tux.webp"
+            },
+            {
+                id: 16,
+                name: 'Black Tie 9cm',
+                category: 'accessories',
+                color: 'Black',
+                description: 'This Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/black%20tie.webp"
+            },
+            {
+                id: 17,
+                name: 'Brown Tie 9cm',
+                category: 'accessories',
+                color: 'Brown',
+                description: 'This Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/brown%20tie.webp"
+            },
+            {
+                id: 18,
+                name: 'Green Tie 9cm',
+                category: 'accessories',
+                color: 'Green',
+                description: 'This Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/green%20tie.webp"
+            },
+            {
+                id: 19,
+                name: 'Navy Striped Tie 9cm',
+                category: 'accessories',
+                color: 'Navy Striped',
+                description: 'This striped Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/navy%20striped%20tie.webp"
+            },
+            {
+                id: 20,
+                name: 'Bordeaux Polka-Dot Tie 9cm',
+                category: 'accessories',
+                color: 'Bordeaux',
+                description: 'This polka-dot Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/bordeaux%20polka%20dot%20tie.webp"
+            },
+            {
+                id: 21,
+                name: 'Navy & Salmon Tie 9cm',
+                category: 'accessories',
+                color: 'Navy & Salmon',
+                description: 'This striped Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
+                price: 1499.99,
+                img_url: "https://raw.githubusercontent.com/caleb-okkers/classique/main/images/navy%20and%20salmon%20striped%20tie.webp"
+            },
+
+
 
         ]
     ))
