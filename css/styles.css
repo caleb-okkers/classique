@@ -817,10 +817,12 @@ margin: 6px 15px;
     display: flex;
     flex-wrap: wrap;
   }
+
+  .about-title {
+    padding: 5rem 2rem;
+  }
 }
-.about-title {
-  padding: 5rem 2rem;
-}
+
 
 @media (max-width: 300px) {
   .container {
