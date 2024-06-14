@@ -15,12 +15,14 @@ function displayCheckoutItems () {
                 <td>${item.id}</td>
                 <td>${item.name}</td>
                 <td>R ${item.price}</td>
-                <td>1</td>
+                <td>${item.quantity}</td>
         `;
         tbody.appendChild(row)
 
-        total += parseFloat(item.price)
+        total += parseFloat(item.price) * item.quantity
     })
+
+
 
     cartTotal.textContent = total.toFixed(2)
 }

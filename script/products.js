@@ -68,6 +68,32 @@ function addToCart(product){
     }
 }
 
+function addToCart(product) {
+    try {
+        // Check if the item already exists in the cart
+        const existingItem = checkoutItems.find(item => item.id === product.id);
+        if (existingItem) {
+            // If the item exists, increase the quantity
+            existingItem.quantity += 1;
+        } else {
+            // If the item doesn't exist, add it with quantity 1
+            product.quantity = 1;
+            checkoutItems.push(product);
+        }
+
+        // Update local storage
+        localStorage.setItem('checkout', JSON.stringify(checkoutItems));
+        
+        // Update the cart counter
+        document.querySelector('#counter').textContent = checkoutItems.reduce((total, item) => total + item.quantity, 0);
+
+        // Optionally display the updated checkout items
+        // displayCheckoutItems();
+    } catch (e) {
+        alert("Add to cart unsuccessful");
+    }
+}
+
 // //displayCheckoutItems
 
 // function displayCheckoutItems () {
