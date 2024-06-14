@@ -53,7 +53,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../index.html"
+                  <a class="nav-link" aria-current="page" href="../index.html"
                     >home</a
                   >
                 </li>
@@ -94,20 +94,20 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col d-flex justify-content-center">
-            <button class="btn btn-outline-success ml-auto m-3" id="adminSortProduct"><span class="text-light">Sort Items</span></button>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-success ml-auto m-3" data-bs-toggle="modal" data-bs-target="#adminAddProduct">
+        <div class="row admin-btn-row">
+          <div class="col d-flex justify-content-end">
+            <button class="btn btn-outline-success admin-btn ml-auto m-3" id="adminSortProduct">
+              <span class="text-light">Sort Items</span>
+            </button>
+            <button type="button" class="btn btn-outline-success admin-btn ml-auto m-3" data-bs-toggle="modal" data-bs-target="#adminAddProduct">
               <span class="text-light">Add New Items</span>
-              
             </button>
           </div>
         </div>
 
         <div class="row">
           
-          <!-- Modal -->
+          <!-- Admin Modal -->
           <div class="modal fade" id="adminAddProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -128,8 +128,8 @@
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-outline-success" id="saveProduct">Save Changes</button>
+                  <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal"><span class="text-light">Close</span></button>
+                  <button type="button" class="btn btn-outline-success" id="saveProduct"><span class="text-light">Save Changes</span></button>
                 </div>
               </div>
             </div>
@@ -139,13 +139,13 @@
           <table class="table-responsive table-bordered">
             <thead class="table-group-divider">
               <tr>
+                <th>Image</th>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Category</th>
                 <th>Color</th>
                 <th>Description</th>
                 <th>Price</th>
-                <th>Image</th>
                 <th>Action</th>
               </tr>
             </thead>

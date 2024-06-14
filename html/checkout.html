@@ -53,7 +53,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../index.html"
+                  <a class="nav-link" aria-current="page" href="../index.html"
                     >home</a
                   >
                 </li>
@@ -98,10 +98,12 @@
                 <table>
                   <thead class="checkout-head">
                     <tr>
+                      <th>Item</th>
                       <th>ID</th>
                       <th>Name</th>
                       <th>Price</th>
                       <th>Quantity</th>
+                      
                     </tr>
                   </thead>
                   <tbody id="tbody"></tbody>
@@ -111,6 +113,7 @@
           </div>
           <div class="row d-flex">
             <div class="col-12 d-flex">
+              <a href="./products.html"><button id="clearCartBtn" class="btn btn-outline-success me-2"><span class="text-light">Back to fashion</span></button></a>
               <button id="clearCartBtn" class="btn btn-outline-success" onclick="clearCart()"><span class="text-light">Clear Cart</span></button>
               <ul id="cartItems"></ul>
               <div class="total ml-auto total-display btn me-2">Total: R <span id="cartTotal">0.00</span></div>
