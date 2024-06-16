@@ -1,3 +1,5 @@
+/* general */
+
 * {
   color: rgb(35, 14, 3);
   font-size: 18px; 
@@ -10,13 +12,13 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   font-family: Georgia, 'Times New Roman', Times, serif !important;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden; 
 }
 
 section {
   min-height: 100vh;
   flex: 1;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden; 
 }
 
 main {
@@ -69,6 +71,8 @@ footer p {
   padding-right: 0.5rem;
   font-size: 1rem;
 }
+
+/* animations */
 
 @keyframes slideFromTop {
   from {
@@ -162,16 +166,9 @@ footer p {
 }
 
 
+/* navbar */
 
 
-
-/*.navbar-brand {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-}*/
 
 .navbar {
   font-family:Georgia, 'Times New Roman', Times, serif;
@@ -191,7 +188,6 @@ footer p {
   background-color: #fff !important;
   transition: 0.3s ease-in;
 }
-
 
 
 
@@ -252,6 +248,8 @@ border: none !important;
 .navbar-toggler {
   padding: 1rem;
 }
+
+/* filter on fashion page */
 
 .filter-section {
   padding: 15px;
@@ -381,7 +379,7 @@ border: none !important;
 .btn-outline-success:hover,
 .sort:hover::before,
 .cart-counter:hover::before {
-  color: #fff !important; /* Ensure text stays visible */
+  color: #fff !important; 
 }
 
 .btn-outline-success span,
@@ -389,8 +387,8 @@ border: none !important;
 .cart-counter span {
   position: relative;
   z-index: 2;
-  backface-visibility: hidden; /* Prevent rendering issues */
-  will-change: color; /* Hint to the browser to optimize */
+  backface-visibility: hidden; 
+  will-change: color; 
 }
 
 .form-check-input {
@@ -399,8 +397,6 @@ border: none !important;
   border: 1px solid rgba(111, 48, 15, 0.7) !important;
   border-radius: 0.25em;
   background-color: transparent;
-  /*-webkit-appearance: none;
-  -moz-appearance: none;*/
   appearance: none;
   cursor: pointer;
 }
@@ -569,6 +565,8 @@ border-radius: 0 !important;
 0% {opacity: 0;}
 100% {opacity: 1;}
 } */
+
+/* product cards */
 
 .card {
 font-family: Georgia, 'Times New Roman', Times, serif;
@@ -762,19 +760,19 @@ margin: 6px 15px;
 
 
 .admin-btn {
-  font-size: 0.875rem; /* Adjust button font size */
-  padding: 8px 16px; /* Adjust button padding */
+  font-size: 0.875rem; 
+  padding: 8px 16px; 
 }
 
 
 .form-control {
-  font-size: 0.875rem; /* Adjust form control font size */
-  padding: 8px 12px; /* Adjust form control padding */
+  font-size: 0.875rem; 
+  padding: 8px 12px; 
 }
 
 td.description-cell {
-  max-height: 100px !important; /* Set a maximum height for the description cell */
-  overflow-y: auto !important; /* Enable vertical scrolling */
+  max-height: 100px !important;
+  overflow-y: auto !important; 
   /* white-space: nowrap !important; */
 }
 
@@ -1022,22 +1020,22 @@ td.description-cell {
   }
 
   table {
-    overflow-x: auto; /* Ensure table remains horizontally scrollable */
-    width: 100%; /* Make table full width */
-    margin-bottom: 1rem; /* Adjust spacing */
+    overflow-x: auto; 
+    width: 100%; 
+    margin-bottom: 1rem;
   }
 
   .form-control {
-    width: 100%; /* Make form controls full width */
+    width: 100%; 
   }
 
   .admin-btn-row {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center align buttons */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .admin-btn {
-    margin-bottom: 0.5rem; /* Adjust button margin */
+    margin-bottom: 0.5rem;
   }
 
   .modal {
@@ -1151,23 +1149,23 @@ td.description-cell {
 
 
   .admin-btn-row {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center align buttons */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .admin-btn {
-    margin-bottom: 0.5rem; /* Adjust button margin */
+    margin-bottom: 0.5rem; 
   }
 
 
   .form-control {
-    width: 100%; /* Make form controls full width */
+    width: 100%; 
   }
 
   .table-responsive {
-    overflow-x: auto; /* Ensure table remains horizontally scrollable */
-    width: 100%; /* Make table full width */
-    margin-bottom: 1rem; /* Adjust spacing */
+    overflow-x: auto; 
+    width: 100%;
+    margin-bottom: 1rem; 
   }
 
   .modal {
@@ -1298,6 +1296,7 @@ td.description-cell {
   table th, table td {
     padding: 4px;
     font-size: 0.50rem !important;
+    width: 100% !important;
   }
 
   
@@ -1308,12 +1307,12 @@ td.description-cell {
   }
 
   .admin-btn-row {
-    margin-bottom: 1rem; /* Adjust spacing */
+    margin-bottom: 1rem; 
  }
 
   .admin-btn {
-    font-size: 0.875rem !important; /* Adjust button font size */
-    padding: 5px 0.05rem !important; /* Adjust button padding */
+    font-size: 0.875rem !important; 
+    padding: 5px 0.05rem !important; 
     scale: 0.9;
   }
 
@@ -1327,14 +1326,15 @@ td.description-cell {
 
 
   table {
-    overflow-x: auto !important; /* Ensure table remains horizontally scrollable */
-    width: 100% !important; /* Make table full width */
-    margin-bottom: 1rem !important; /* Adjust spacing */
-    display: block;
+    overflow-x: auto !important; 
+    width: 100% !important;
+    margin-bottom: 1rem!important; 
+    display: block !important;
+    table-layout: fixed !important; 
   }
 
   .form-control {
-    width: 100% !important; /* Make form controls full width */
+    width: 100% !important; 
   }
 
   .cart-counter span,
@@ -1400,7 +1400,7 @@ td.description-cell {
   .description-cell {
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 200px; /* adjust the width to your liking */
+    max-width: 200px; 
   }
 
   .description {

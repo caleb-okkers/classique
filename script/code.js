@@ -1,3 +1,5 @@
+//initialize products and create array of objects containing product info stored on local storage 
+
 let products = JSON.parse(localStorage.getItem('products')) ?
     JSON.parse(localStorage.getItem('products')) : localStorage.setItem('products', JSON.stringify(
         [

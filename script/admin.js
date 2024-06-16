@@ -74,11 +74,8 @@ function adminContent(args) {
     }
 }
 
-
-// Call the function to display the initial products
 adminContent(products);
 
-// function to help update the product
 function UpdateProduct(item, index) {
     try {
         const updatedProduct = {
@@ -99,7 +96,6 @@ function UpdateProduct(item, index) {
     }
 }
 
-// function that deletes the product
 function deleteProduct(index) {
     try {
         products.splice(index, 1);
@@ -110,7 +106,6 @@ function deleteProduct(index) {
     }
 }
 
-// function that sorts the products
 let highest = false;
 sortedProducts.addEventListener('click', () => {
     try {
@@ -127,29 +122,7 @@ sortedProducts.addEventListener('click', () => {
     }
 });
 
-// this function adds new product
-// let adminSavedProduct = document.getElementById('saveProduct');
-// adminSavedProduct.addEventListener('click', () => {
-//     try {
-//         const newId = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1
 
-//         const newProduct = {
-//             id: newId,
-//             name: document.querySelector('#addName').value,
-//             category: document.querySelector('#addCategory').value,
-//             color: document.querySelector('#addColor').value,
-//             description: document.querySelector('#addDescription').value,
-//             price: parseInt(document.querySelector('#addPrice').value, 10),
-//             img_url: document.querySelector('#addImage').value
-//         };
-
-//         products.push(newProduct);
-//         localStorage.setItem('products', JSON.stringify(products));
-//         adminContent(products);
-//     } catch (e) {
-//         alert('Unable to Add new product');
-//     }
-// });
 
 function Product(id, name, category, color, description, price, img_url) {
     this.id = id;
@@ -186,18 +159,16 @@ adminSavedProduct.addEventListener('click', () => {
     }
 });
 
-// Ensure this script runs after the DOM has fully loaded
+
 document.addEventListener("DOMContentLoaded", function() {
-    // Target all description cells
+
     const descriptionCells = document.querySelectorAll('td.description-cell');
   
     descriptionCells.forEach(cell => {
-      // Apply the overflow-y auto style if it's not already set
       if (!cell.style.overflowY) {
         cell.style.overflowY = 'auto';
       }
       
-      // Set max height if it's not already set
       if (!cell.style.maxHeight) {
         cell.style.maxHeight = '100px';
       }

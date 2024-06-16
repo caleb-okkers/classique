@@ -61,11 +61,15 @@ displayCheckoutItems()
 //     displayCheckoutItems();
 // }
 
+//clearCart function
+
 function clearCart() {
     localStorage.removeItem('checkout');
     alert('Press "OK" to remove items from your cart');
     location.reload();
 }
+
+//payNow function simulating a successful payment
 
 function payNow() {
     localStorage.removeItem('checkout');
