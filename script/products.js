@@ -13,20 +13,35 @@ function displayProducts(args) {
     container.innerHTML = ""
     try {
         if (args && args.length > 0) {
-            args.forEach(product => {
-                container.innerHTML += `
-                    <div class="card" data-category="${product.category}">
-                        <img src="${product.img_url}" class="card-img-top" alt="${product.name}" loading="lazy">
-                        <div class="card-body">
-                            <h5 class="card-title">${product.name}</h5>
-                            <p class="card-description-toggle">Description <span>+</span></p>
-                            <p class="card-text card-description">${product.description}</p>
-                            <p class="card-text">R ${product.price}</p>
-                            <button type='button' class="btn btn-outline-success addToCart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" onclick='addToCart(${JSON.stringify(product)})'><span class="text-light">Add to cart</span></button>
+        
+            let row = document.createElement('div');
+            row.classList.add('row')
+
+            args.forEach((product, index) => {
+                   
+                const card = `
+                    <div class="col-md-4 col-sm-4 col-lg-4 mb-4">
+                        <div class="card" data-category="${product.category}">
+                            <img src="${product.img_url}" class="card-img-top" alt="${product.name}" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">${product.name}</h5>
+                                <p class="card-description-toggle">Description <span>+</span></p>
+                                <p class="card-text card-description">${product.description}</p>
+                                <p class="card-text">R ${product.price}</p>
+                                <button type='button' class="btn btn-outline-success addToCart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" onclick='addToCart(${JSON.stringify(product)})'><span class="text-light">Add to cart</span></button>
+                            </div>
                         </div>
                     </div>
                 
                  ` 
+
+                 row.innerHTML += card
+
+                 if ((index + 1) % 3 === 0 || index === args.length - 1) {
+                    container.appendChild(row)
+                    row = document.createElement('div')
+                    row.classList.add('row')
+                 }
             })
     
             document.querySelectorAll('.card-description-toggle').forEach(toggle => {
@@ -44,11 +59,11 @@ function displayProducts(args) {
             })
         }else {
             container.innerHTML = `
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="spinner-border" role="status"></div>
-                    <p>No Products Found</p>
+                <div class="d-flex flex-column justify-content-center align-items-center mx-auto w-100 h-100 pt-5">
+                    <div class="spinner-border spinner mb-3" role="status"></div>
+                    <p class="text-center">No Products Found</p>
                 </div>
-            `;
+                `;
         }
         
         

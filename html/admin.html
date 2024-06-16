@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="container">
@@ -82,7 +86,7 @@
     </header>
       
     <main>
-      <section class="container">
+      <section class="container content">
 
         <div class="container">
           <div class="row pt-4">
@@ -96,7 +100,7 @@
 
         <div class="row admin-btn-row">
           <div class="col d-flex justify-content-end">
-            <button class="btn btn-outline-success admin-btn ml-auto m-3" id="adminSortProduct">
+            <button class="btn sort admin-btn ml-auto m-3" id="adminSortProduct">
               <span class="text-light">Sort Items</span>
             </button>
             <button type="button" class="btn btn-outline-success admin-btn ml-auto m-3" data-bs-toggle="modal" data-bs-target="#adminAddProduct">
@@ -118,12 +122,12 @@
                 <div class="modal-body">
                   <form class="form">
                     <div class="container">
-                      <input class="form-control m-2" type="text" placeholder="Enter item name" name="addName" id="addName" required>
-                      <input class="form-control m-2" type="text" placeholder="Enter item category" name="addCategory" id="addCategory" required >
-                      <input class="form-control m-2" type="text" placeholder="Enter item color" name="addColor" id="addColor" required >
-                      <textarea class="form-control m-2" placeholder="Enter item description" name="addDescription" id="addDescription" required></textarea>
-                      <input class="form-control m-2" type="number" placeholder="Enter item price" name="addPrice" id="addPrice" required >
-                      <input class="form-control m-2" type="url" placeholder="Enter image url" name="addImage" id="addImage" required >
+                      <input class="form-control m-2  contact-form" type="text" placeholder="Enter item name" name="addName" id="addName" required>
+                      <input class="form-control m-2  contact-form" type="text" placeholder="Enter item category" name="addCategory" id="addCategory" required >
+                      <input class="form-control m-2  contact-form" type="text" placeholder="Enter item color" name="addColor" id="addColor" required >
+                      <textarea class="form-control m-2  contact-form" placeholder="Enter item description" name="addDescription" id="addDescription" required></textarea>
+                      <input class="form-control m-2  contact-form" type="number" placeholder="Enter item price" name="addPrice" id="addPrice" required >
+                      <input class="form-control m-2  contact-form" type="url" placeholder="Enter image url" name="addImage" id="addImage" required >
                     </div>
                   </form>
                 </div>
@@ -156,11 +160,11 @@
         </div>
         
       </section>
+      <footer>
+        <p>Copyright &copy; <span id="currentYear"></span> All Rights Reserved.</p>
+      </footer>  
     </main>
 
-    <footer>
-      <p>Copyright &copy; <span id="currentYear"></span> All Rights Reserved.</p>
-    </footer>  
 
     <script src="../script/admin.js"></script>
     <script

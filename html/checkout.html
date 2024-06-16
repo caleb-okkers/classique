@@ -17,6 +17,11 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    
   </head>
   <body>
     <header class="container">
@@ -82,7 +87,7 @@
     </header>
       
     <main>
-      <section class="container">
+      <section class="container content">
 
         <div class="container pt-4">
           <div class="row pt-5 d-flex justify-content-center">
@@ -111,23 +116,29 @@
               </div>
             </div>
           </div>
-          <div class="row d-flex">
+          <!-- <div class="row d-flex">
+            <div class="col-12 d-flex justify-content-center">
+              <div id="spinnerdiv"></div>
+            </div>
+          </div> -->
+          <div class="row d-flex checkout-actions justify-content-center">
             <div class="col-12 d-flex">
-              <a href="./products.html"><button id="clearCartBtn" class="btn btn-outline-success me-2"><span class="text-light">Back to fashion</span></button></a>
+              <a href="./products.html"><button id="fashionBtn" class="btn btn-outline-success me-2"><span class="text-light">Back to fashion</span></button></a>
               <button id="clearCartBtn" class="btn btn-outline-success" onclick="clearCart()"><span class="text-light">Clear Cart</span></button>
               <ul id="cartItems"></ul>
               <div class="total ml-auto total-display btn me-2">Total: R <span id="cartTotal">0.00</span></div>
               <button id="payNowBtn" class="btn btn-outline-success" onclick="payNow()"><span class="text-light">Pay now</span></button>
             </div>
           </div>
+          
         </div>
 
       </section>
+      <footer>
+        <p>Copyright &copy; <span id="currentYear"></span> All Rights Reserved.</p>
+      </footer>  
     </main>
 
-    <footer>
-      <p>Copyright &copy; <span id="currentYear"></span> All Rights Reserved.</p>
-    </footer>  
 
     <script src="../script/checkout.js"></script>
     <script

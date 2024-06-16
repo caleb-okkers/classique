@@ -6,6 +6,7 @@ function displayCheckoutItems (args) {
     const tbody = document.querySelector('#tbody')
     const cartTotal = document.querySelector('#cartTotal')
     tbody.innerHTML = ''
+    const spinner = document.querySelector('#spinnerdiv')
 
     let total = 0 
 
@@ -13,7 +14,7 @@ function displayCheckoutItems (args) {
         checkoutItems.forEach(item => {
             const row = document.createElement('tr')
             row.innerHTML = `
-                    <td class='w-50'><img src="${item.img_url}" alt="${item.id}" class="img-thumbnail h-25 w-25"></td>
+                    <td class='w-50'><img src="${item.img_url}" alt="${item.id}" class="img-thumbnail img-checkout"></td>
                     <td>${item.id}</td>
                     <td>${item.name}</td>
                     <td>R ${item.price}</td>
@@ -24,11 +25,11 @@ function displayCheckoutItems (args) {
             total += parseFloat(item.price) * item.quantity
         })
     }else {
-        tbody.innerHTML = `
+        spinner.innerHTML = `
         <div class="d-flex justify-content-center align-items-center">
-            <div class="spinner-border" role="status"></div>
-            <p>No Products Found</p>
+            <div class="spinner-border mx-5 spinner" role="status"></div>
         </div>
+            <p class="text-center">No Items Yet</p>
         `;
     }
 

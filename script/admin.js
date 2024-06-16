@@ -3,6 +3,8 @@ let products = JSON.parse(localStorage.getItem('products')) || [];
 let sortedProducts = document.getElementById('adminSortProduct');
 let tableContent = document.querySelector('#table-products');
 
+const spinner = document.querySelector('#spinnerdiv')
+
 
 function adminContent(args) {
     try {
@@ -11,17 +13,17 @@ function adminContent(args) {
             args.forEach((product, i) => {
                 tableContent.innerHTML += `
                 <tr>
-                    <td><img src="${product.img_url}" alt="${product.id}" class="img-thumbnail h-50 w-50"></td>
+                    <td><img src="${product.img_url}" alt="${product.id}" class="img-thumbnail"></td>
                     <td>${product.id}</td>
                     <td>${product.name}</td>
                     <td>${product.category}</td>
                     <td>${product.color}</td>
-                    <td>${product.description}</td>
+                    <td class="description-cell">${product.description}</td>
                     <td>R ${product.price}</td>
                     <td>
                     <div class="">
-                        <button class="btn btn-outline-success ms-2 mb-2" data-bs-toggle="modal" data-bs-target="#updateProduct${product.id}"><span class="text-light">Update</span></button>
-                        <button class="btn btn-outline-success ms-2" onclick="deleteProduct(${i})"><span class="text-light">Delete</span></button>
+                        <button class="btn btn-outline-success ms-2 mb-2 admin-btn" data-bs-toggle="modal" data-bs-target="#updateProduct${product.id}"><span class="text-light"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></span></button>
+                        <button class="btn btn-outline-success ms-2 admin-btn" onclick="deleteProduct(${i})"><span class="text-light"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></span></button>
                         <div class="modal fade" id="updateProduct${product.id}" tabindex="-1" aria-labelledby="updateProduct${product.id}" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content">
@@ -32,13 +34,13 @@ function adminContent(args) {
                             <div class="modal-body">
                               <form>
                               <div class="container">
-                              <input class="form-control m-2" type="text" placeholder="Enter item id" value="${product.id}" name="admin-id" id="admin-id${product.id}" required>
-                              <input class="form-control m-2" type="text" placeholder="Enter item name" value="${product.name}" name="admin-name" id="admin-name${product.id}" required>
-                              <input class="form-control m-2" type="text" placeholder="Enter item category" value="${product.category}" name="admin-category" id="admin-category${product.id}" required>
-                              <input class="form-control m-2" type="text" placeholder="Enter item color" value="${product.color}" name="admin-color" id="admin-color${product.id}" required>
-                              <textarea class="form-control m-2" placeholder="Enter item description" required name="admin-description" id="admin-description${product.id}">${product.description}</textarea>
-                              <input class="form-control m-2" type="number" placeholder="Enter item price" value="${product.price}" name="admin-price" id="admin-price${product.id}" required>
-                              <input class="form-control m-2" type="url" placeholder="Enter image URL" value="${product.img_url}" name="admin-img_url" id="admin-img_url${product.id}" required>
+                              <input class="form-control m-2  contact-form" type="text" placeholder="Enter item id" value="${product.id}" name="admin-id" id="admin-id${product.id}" required>
+                              <input class="form-control m-2  contact-form" type="text" placeholder="Enter item name" value="${product.name}" name="admin-name" id="admin-name${product.id}" required>
+                              <input class="form-control m-2  contact-form" type="text" placeholder="Enter item category" value="${product.category}" name="admin-category" id="admin-category${product.id}" required>
+                              <input class="form-control m-2  contact-form" type="text" placeholder="Enter item color" value="${product.color}" name="admin-color" id="admin-color${product.id}" required>
+                              <textarea class="form-control m-2  contact-form description" placeholder="Enter item description" required name="admin-description" id="admin-description${product.id}">${product.description}</textarea>
+                              <input class="form-control m-2  contact-form" type="number" placeholder="Enter item price" value="${product.price}" name="admin-price" id="admin-price${product.id}" required>
+                              <input class="form-control m-2  contact-form" type="url" placeholder="Enter image URL" value="${product.img_url}" name="admin-img_url" id="admin-img_url${product.id}" required>
                               </div>
                               </form>
                             </div>
@@ -183,3 +185,21 @@ adminSavedProduct.addEventListener('click', () => {
         alert('Unable to Add new product');
     }
 });
+
+// Ensure this script runs after the DOM has fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Target all description cells
+    const descriptionCells = document.querySelectorAll('td.description-cell');
+  
+    descriptionCells.forEach(cell => {
+      // Apply the overflow-y auto style if it's not already set
+      if (!cell.style.overflowY) {
+        cell.style.overflowY = 'auto';
+      }
+      
+      // Set max height if it's not already set
+      if (!cell.style.maxHeight) {
+        cell.style.maxHeight = '100px';
+      }
+    });
+  });

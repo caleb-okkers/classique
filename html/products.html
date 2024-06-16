@@ -104,16 +104,16 @@
                 <div class="mb-3">
                   <label class="filter-label mb-3">category</label>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="category1" value="suits">
+                    <input class="form-check-input" type="checkbox" id="category1" value="suit">
                     <label class="form-check-label" for="category1">suits</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="category2" value="essentials">
-                    <label class="form-check-label" for="category2">essentials</label>
+                    <input class="form-check-input" type="checkbox" id="category2" value="shirt">
+                    <label class="form-check-label" for="category2">shirts</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="category3" value="accessories">
-                    <label class="form-check-label" for="category3">accessories</label>
+                    <input class="form-check-input" type="checkbox" id="category3" value="tie">
+                    <label class="form-check-label" for="category3">ties</label>
                   </div>
                 </div>
                 <button type="button" class="btn btn-outline-success" onclick="applyFilters()"><span class="text-light">apply filters</span></button>
@@ -128,11 +128,11 @@
     </header>
     
     <main>
-      <section class="container">
+      <section class="container content">
         <div class="container">
           <div class="row pt-1">
             
-              <div class="fashion-text">
+              <div class="fashion-title">
                 <h5>Fashion</h5>
               </div>
             
@@ -142,28 +142,37 @@
           <div class="row">
             
               <div class="container-fluid">
-                <div class="row">
-                  <form class="d-flex justify-content-center" role="search">
-                    <input class="form-control m-2 w-50 h-75" type="search" placeholder="Search" aria-label="Search" id="search">
-                    <button class="btn btn-outline-success m-2" type="button" id="sort"><span class="text-light">Sorted by price: lowest</span></button>
-                    <a href="./checkout.html"><div class="btn btn-outline-success m-2"><span class="text-light"><i class="fa-solid fa-cart-shopping px-1" style="color: #ffffff;"></i></span><span id="counter" class="px-1"></span></div></a>
-                  </form>
+                <div class="row d-flex justify-content-center align-items-center">
+                  <div class="col-12 col-md-12 p-1 product-actions">
+                    <button class="btn sort m-2 " type="button" id="sort"><span class="text-light">Sorted by price: lowest</span></button>
+                    <a href="./checkout.html"><div class="btn cart-counter m-2"><span class="text-light"><i class="fa-solid fa-cart-shopping px-1" style="color: #ffffff;"></i></span><span id="counter" class="px-1"></span></div></a>
+                    <form role="search">
+                      <input class="form-control m-2 w-50 h-75" type="search" placeholder="Search" aria-label="Search" id="search">
+                    </form>
+                      
+                    </div>
+                    
                 </div>
               </div>
           </div>
           
-          <div class="product-container pt-3" id="catalogue">
+          <div class="row">
+            <div class="col-12 product-container pt-3" id="catalogue">
+  
+              
+              
             
-          
+            </div>
+            
           </div>
 
         </div> 
       </section>
+      <footer>
+        <p>Copyright &copy; <span id="currentYear"></span> All Rights Reserved.</p>
+      </footer>  
     </main>
 
-    <footer>
-      <p>Copyright &copy; <span id="currentYear"></span> All Rights Reserved.</p>
-    </footer>  
 
     <script src="../script/products.js"></script>
 

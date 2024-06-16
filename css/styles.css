@@ -6,74 +6,43 @@
 
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 section {
+  min-height: 100vh;
+  flex: 1;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 .home {
   background-image: url(https://raw.githubusercontent.com/caleb-okkers/classique/main/images/home1.webp);
-  object-fit: cover;
+  /* object-fit: cover; */
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: unset !important;
+  /* background-size: cover; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh !important;
+  flex: 1;
 }
 
-
-@keyframes slideFromTop {
-  0% {transform: translateY(-100%); opacity: 0;}
-  100% {transform: translateY(0%); opacity: 1;}
-}
-
-.welcome-text {
-  animation: slideFromTop 1s ease-out forwards;
-}
-
- @keyframes slideFromLeft {
-  0% {transform: translateX(-100%); opacity: 0;}
-  100% {transform: translateX(0%); opacity: 1;}
-}
-
-.slideFromLeft,
-.contact-img {
-  animation: slideFromLeft 2s ease-out forwards;
-} 
-
-@keyframes slideFromRight {
-  0% {transform: translateX(100%); opacity: 0;}
-  100% {transform: translateX(0%); opacity: 1;}
-}
-
-.slideFromRight {
-  animation: slideFromRight 2s ease-out forwards;
-} 
-
-@keyframes easeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-.classic-man {
-  animation: easeIn 2s ease-out forwards;
-}
-
-@keyframes easeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-.classic-man {
-  animation: easeIn 2s ease-out forwards;
-}
-
-
-html, body {
+/* html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
+} */
 
 footer {
   
@@ -83,7 +52,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   font-family:Georgia, 'Times New Roman', Times, serif;
-  
+  box-sizing: border-box;
 }
 
 footer p {
@@ -101,49 +70,100 @@ footer p {
   font-size: 1rem;
 }
 
-/* @media (max-width: 1536px) {
-  .container {
-    max-width: 1280px;
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%); 
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }
 
-@media (max-width: 1280px) {
-  .container {
-    max-width: 1024px;
+.welcome-text {
+  animation: slideFromTop 1s ease-out forwards;
+}
+
+ @keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%); 
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
 
-@media (max-width: 1024px) {
-  .container {
-    max-width: 768px;
+.slideFromLeft,
+.contact-img {
+  animation: slideFromLeft 2s ease-out forwards;
+} 
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%); 
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    max-width: 640px;
+.slideFromRight {
+  animation: slideFromRight 2s ease-out forwards;
+} 
+
+@keyframes easeIn {
+  from {
+    opacity: 0;
   }
 
+  to {
+    opacity: 1;
+  }
 }
 
-@media (max-width: 640px) {
-  .container {
-    max-width: 475px;
-  }
+.classic-man {
+  animation: easeIn 2s ease-out forwards;
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  text-align: center !important;
+  color: rgb(111, 48, 15) !important;
+  font-size: 1.5rem;
 }
 
-@media (max-width: 475px) {
-  .container {
-    max-width: 300px;
+@keyframes contentEaseIn {
+  from {
+    opacity: 0;
   }
 
+  to {
+    opacity: 1;
+  }
+  
 }
 
-@media (max-width: 300px) {
-  .container {
-    width: 100%;
-  }
-} */
+.content {
+  animation: contentEaseIn 0.5s ease-out forwards;
+}
+
+
+@keyframes identifier {
+  
+}
+
+
+
+
 
 /*.navbar-brand {
   display: flex;
@@ -160,11 +180,20 @@ footer p {
   font-style: normal;
   font-variation-settings: "wdth" 100;
   background-color: #fff;
+  /* z-index: 1000; */
 }
 
- .home-nav {
-  background-color: transparent !important;
+.home-nav {
+ background-color: transparent ;
 }
+
+.home-nav.scrolled {
+  background-color: #fff !important;
+  transition: 0.3s ease-in;
+}
+
+
+
 
 .offcanvas {
   background-color: rgb(185, 157, 101, 0.5) !important;
@@ -203,6 +232,7 @@ footer p {
 .nav-link:hover {
   /* color: rgba(111, 48, 15, 0.7) !important; */
   background-color: rgb(185, 157, 101, 0.2) !important;
+  /* text-decoration: underline; */
 }
 
 .dropdown-item:hover {
@@ -283,6 +313,27 @@ border: none !important;
   border-radius: 0 !important;
 }
 
+.cart-counter,
+.sort {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(29, 29, 29) !important;
+  color: #fff !important;
+  border-color: rgb(29, 29, 29) !important;
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  text-align: center !important;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.5s ease;
+  border-radius: 0 !important;
+  z-index: 1;
+  will-change: color;
+}
+
 .btn-outline-success {
   position: relative;
   overflow: hidden;
@@ -300,10 +351,12 @@ border: none !important;
   transition: color 0.5s ease;
   border-radius: 0 !important;
   z-index: 1;
-  will-change: color; /* Hint to the browser to optimize */
+  will-change: color; 
 }
 
-.btn-outline-success::before {
+.btn-outline-success::before,
+.sort::before,
+.cart-counter::before {
   content: '';
   position: absolute;
   top: 0;
@@ -315,19 +368,25 @@ border: none !important;
   transition: transform 0.5s ease;
   transform: scaleX(0);
   transform-origin: left;
-  backface-visibility: hidden; /* Prevent rendering issues */
-  will-change: transform; /* Hint to the browser to optimize */
+  backface-visibility: hidden; 
+  will-change: transform; 
 }
 
-.btn-outline-success:hover::before {
+.btn-outline-success:hover::before,
+.sort:hover::before,
+.cart-counter:hover::before {
   transform: scaleX(1);
 }
 
-.btn-outline-success:hover {
+.btn-outline-success:hover,
+.sort:hover::before,
+.cart-counter:hover::before {
   color: #fff !important; /* Ensure text stays visible */
 }
 
-.btn-outline-success span {
+.btn-outline-success span,
+.sort span,
+.cart-counter span {
   position: relative;
   z-index: 2;
   backface-visibility: hidden; /* Prevent rendering issues */
@@ -369,7 +428,7 @@ border: none !important;
   color: rgb(111, 48, 15) !important;
 }
 
-.home-img-div {
+/* .home-img-div {
 width: 100%;
 height: 80vh;
 padding-top: 5rem;
@@ -382,7 +441,7 @@ justify-content: center;
 height: 80vh;
 overflow: hidden;
 
-}
+} */
 
 .welcome-div {
 width: 100%;
@@ -424,7 +483,7 @@ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .about-text,
-.fashion-text {
+.fashion-title {
 font-family: Georgia, 'Times New Roman', Times, serif;
 width: 100%;
 text-align: center;
@@ -436,7 +495,7 @@ margin: 0 auto;
 }
 
 .about-text h5,
-.fashion-text h5,
+.fashion-title h5,
 .contact-text ,
 .checkout-text  {
 font-size: 2rem;
@@ -498,13 +557,13 @@ border: 1px solid rgb(29, 29, 29) !important;
 border-radius: 0 !important;
 }
 
+/* products page */
 
-
-.product-container {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 16px;
-}
+/* .product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  } */
 
 /* @keyframes easeIn {
 0% {opacity: 0;}
@@ -562,8 +621,8 @@ display: block;
 }*/
 
 .contact-img {
-width: 100%;
-
+max-width: 100%;
+height: auto;
 }
 
 form {
@@ -609,6 +668,7 @@ background-color: #fff;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 /* border-radius: 8px;
 overflow: hidden; */
+overflow-x: auto;
 }
 
 table th,
@@ -668,6 +728,7 @@ margin-right: 0 !important;
 
 .contact-label-div {
 background-color: rgb(29, 29, 29);
+width: 100%;
 }
 
 .contact-label {
@@ -675,6 +736,57 @@ color: #fff !important;
 margin: 6px 15px;
 }
 
+/* spinner */
+
+.spinner {
+  color: rgb(111, 48, 15);
+}
+
+.spinner-text {
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
+
+
+.img-col {
+  height: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center; 
+}
+
+.img-checkout {
+  width: 25%;
+  height: 25%;
+}
+
+
+
+.admin-btn {
+  font-size: 0.875rem; /* Adjust button font size */
+  padding: 8px 16px; /* Adjust button padding */
+}
+
+
+.form-control {
+  font-size: 0.875rem; /* Adjust form control font size */
+  padding: 8px 12px; /* Adjust form control padding */
+}
+
+td.description-cell {
+  max-height: 100px !important; /* Set a maximum height for the description cell */
+  overflow-y: auto !important; /* Enable vertical scrolling */
+  /* white-space: nowrap !important; */
+}
+
+.modal {
+  padding-top: 3rem;
+  /* z-index: 1000 !important; */
+}
+
+
+
+
+/* media queries for responsiveness */
 
 @media (max-width: 1536px) {
   .container {
@@ -686,12 +798,27 @@ margin: 6px 15px;
   .container {
     max-width: 1024px;
   }
+
+  .home {
+    background-position: right;
+    background-size: cover;
+  }
+
+  .product-actions {
+    width: 80%;
+    margin-right: 1rem;
+  }
 }
 
 @media (max-width: 1024px) {
+  body {
+    font-size: 16px; 
+}
   .container {
     max-width: 768px;
   }
+
+  
 
   .navbar-brand {
     font-size: 1.5rem;
@@ -701,14 +828,66 @@ margin: 6px 15px;
     font-size: 1.5rem;
   }
 
+  /* .home {
+    background-position: center;
+    background-size: cover;
+  } */
+
+  .welcome-title,
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-title {
+    padding: 5rem 2rem;
+  }
+
    .about-text {
     padding: 2rem;
   } 
+
+
+  .card-body {
+    padding: 1rem; 
+  }
+
+  .card-title {
+    font-size: 1.2rem; 
+  }
+
+  .card-text,
+  .card-description-toggle {
+    font-size: 1rem; 
+  }
+
+.form-control {
+  font-size: 1rem;
+  padding: 10px 15px;
+}
+
+.product-actions {
+  width: 80%;
+  margin-right: 2rem;
+}
+
+/* .contact-div {
+  display: flex;
+  flex-wrap: nowrap;
+} */
+
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 12px !important; 
+  }
   .container {
     max-width: 640px;
+  }
+
+  .home {
+    background-position:center !important ;
+    background-size: cover;
   }
 
   /* .navbar-brand {
@@ -718,14 +897,53 @@ margin: 6px 15px;
   .nav-link {
     font-size: 1.5rem;
   } */
-  
-  .welcome-title,
-  .about-title {
-    font-size: 2rem;
+
+  .home {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .welcome-div {
+    height: 80vh !important;
   }
 
   .welcome-text h3 {
-    font-size: 2rem;
+    font-size: 1.2rem !important;
+    
+  }
+
+
+  .welcome-title,
+  .about-title,
+  .fashion-title,
+  .contact-text,
+  .checkout-text {
+    font-size: 1.5rem !important;
+  }
+  
+
+  .about-title {
+    padding: 5rem 2rem;
+  }
+
+  .img-col {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    padding: 2rem 1rem;
+  }
+
+  .img-col {
+    height: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center; 
+  }
+
+  .welcome-text h3 {
+    font-size: 1.5rem;
   }
 
   .home-img-div {
@@ -737,11 +955,152 @@ margin: 6px 15px;
     padding-top: 3rem;
     height: 70vh;
   }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer p {
+    margin-bottom: 1rem;
+  }
+
+
+  .card-body {
+    padding: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1rem; 
+  }
+
+  .card-text,
+  .card-description-toggle {
+    font-size: 0.9rem; 
+  }
+
+  .btn-outline-success {
+  padding: 5px 8px !important; 
+  font-size: 0.8rem !important; 
+  }  
+
+  .checkout-text {
+    font-size: 1.25rem;
+  }
+
+  table th, table td {
+    padding: 6px;
+    font-size: 0.875rem;
+  }
+
+  .total-display {
+    font-size: 1rem;
+  }
+
+  .checkout-actions {
+    padding: 6px;
+    font-size: 0.875rem;
+    flex-wrap: wrap;
+  }
+
+  .checkout-actions .col-12 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout-actions .btn  {
+    width: 50%;
+    margin: 0.5rem;
+    
+  }
+
+  .checkout-actions #fashionBtn {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  table {
+    overflow-x: auto; /* Ensure table remains horizontally scrollable */
+    width: 100%; /* Make table full width */
+    margin-bottom: 1rem; /* Adjust spacing */
+  }
+
+  .form-control {
+    width: 100%; /* Make form controls full width */
+  }
+
+  .admin-btn-row {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+  }
+
+  .admin-btn {
+    margin-bottom: 0.5rem; /* Adjust button margin */
+  }
+
+  .modal {
+    padding-top: 3rem;
+  }
+
+  .product-actions {
+    width: 80%;
+    margin-right: 2.5rem;
+  }
+
+  .contact-div .row {
+    flex-direction: column;
+  }
+
+  .contact-div .col-6 {
+    max-width: 100%;
+  }
+
+  .contact-div .contact-img {
+    width: 100%;
+  }
+
+  .contact-div .form-control, .contact-div textarea {
+    width: 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-div .col-auto {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fashion-title h5,
+  .contact-text,
+  .checkout-text {
+    padding-top: 2rem!important;
+    font-size: 1.5rem!important;
+  }
+
+  .welcome-title,
+  .about-title,
+  .fashion-title,
+  .contact-text,
+  .checkout-text {
+    font-size: 1.5rem !important;
+  }
+
 }
+
 
 @media (max-width: 640px) {
   .container {
     max-width: 475px;
+  }
+
+  .home {
+    background-position: center;
+    background-size: cover;
   }
 
   .home-img-div {
@@ -765,22 +1124,70 @@ margin: 6px 15px;
   .img-col {
     height: auto;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center; 
   }
 
   .about-text {
     padding: 2rem 1rem;
   }
 
+  .about-title {
+    padding: 5rem 2rem;
+  }
+  
   .contact-div {
     display: flex !important;
     flex-wrap: wrap !important;
-    flex-direction: column !important; /* Stack items vertically on smaller screens */
-    align-items: center !important; /* Center items horizontally */
+    flex-direction: column !important;
+    align-items: center !important; 
+  }
+
+  .form-control {
+    font-size: 0.875rem;
+    padding: 8px 12px;
+ }
+
+
+
+  .admin-btn-row {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+  }
+
+  .admin-btn {
+    margin-bottom: 0.5rem; /* Adjust button margin */
+  }
+
+
+  .form-control {
+    width: 100%; /* Make form controls full width */
+  }
+
+  .table-responsive {
+    overflow-x: auto; /* Ensure table remains horizontally scrollable */
+    width: 100%; /* Make table full width */
+    margin-bottom: 1rem; /* Adjust spacing */
+  }
+
+  .modal {
+    padding: 3rem 3rem;
+    
+  }
+
+  .product-actions {
+    width: 80%;
+    margin-right: 0rem;
   }
   
 }
 
 @media (max-width: 475px) {
+
+  body {
+    font-size: 12px; 
+  }
+
   .container {
     max-width: 300px;
   }
@@ -790,26 +1197,27 @@ margin: 6px 15px;
   }
 
   .welcome-div {
-    height: 50vh;
+    height: 70vh;
   }
 
-  .welcome-text h5,
   .welcome-text h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    
   }
+
 
   .welcome-title,
-  .about-title {
-    font-size: 1.2rem;
+  .about-title,
+  .fashion-title {
+    font-size: 1.2rem !important;
   }
 
   .home {
-    background-position: center;
+    background-position:center;
     background-size: cover;
-  }
+  } 
 
-  .about-text,
-  .classic-man {
+  .about-text {
     padding: 1rem;
   }
 
@@ -821,22 +1229,211 @@ margin: 6px 15px;
   .about-title {
     padding: 5rem 2rem;
   }
+
+  .fashion-title h5,
+  .contact-text,
+  .checkout-text {
+    padding-top: 2rem!important;
+    font-size: 1.2rem!important;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+
+  .img-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+
+  .card-body {
+    padding: 0.5rem; 
+  }
+
+  .card-title {
+    font-size: 0.9rem; 
+  }
+
+  .card-text,
+  .card-description-toggle {
+    font-size: 0.8rem;
+  }
+
+  .btn-outline-success span {
+    padding: 8px 16px !important;
+    font-size: 0.75rem !important;
+  }
+
+  .total-display {
+    font-size: 0.875rem;
+  }
+  
+  /* .total-display, #payNowBtn {
+  width: 100%;
+  text-align: center;
+  } */
+
+  .form-control {
+    font-size: 0.875rem;
+    padding: 8px 12px;
+  }
+
+  .checkout-text {
+    font-size: 1rem;
+ }
+
+  table th, table td {
+    padding: 4px;
+    font-size: 0.50rem !important;
+  }
+
+  
+
+  .img-checkout {
+    width: 50%;
+    height: 50%;
+  }
+
+  .admin-btn-row {
+    margin-bottom: 1rem; /* Adjust spacing */
+ }
+
+  .admin-btn {
+    font-size: 0.875rem !important; /* Adjust button font size */
+    padding: 5px 0.05rem !important; /* Adjust button padding */
+    scale: 0.9;
+  }
+
+  .admin-btn:nth-child(1) {
+    padding: 5px 0.08rem !important;
+  }
+
+  .modal {
+    padding-top: 3rem;
+  }
+
+
+  table {
+    overflow-x: auto !important; /* Ensure table remains horizontally scrollable */
+    width: 100% !important; /* Make table full width */
+    margin-bottom: 1rem !important; /* Adjust spacing */
+    display: block;
+  }
+
+  .form-control {
+    width: 100% !important; /* Make form controls full width */
+  }
+
+  .cart-counter span,
+  .sort span {
+    font-size: 0.8rem !important;
+    
+  }
+
+  .cart-counter,
+  .sort {
+    font-size: 0.8rem !important;
+    
+  }
+
+  .product-actions {
+    width: 80%;
+    margin-right: 1rem;
+  }
+
+  .product-actions.form-control {
+    width: 100vw !important;
+  }
+  
+
+  .contact-div .row {
+    flex-direction: column;
+  }
+
+.contact-div .col-6 {
+    max-width: 100%;
+  }
+ 
+  .contact-div .contact-img {
+    width: 100%;
+  }
+
+  .contact-div .form-control, .contact-div textarea {
+    width: 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-div .col-auto {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-div .col {
+    text-align: center;
+  }
+
+  .contact-div .btn.custom-submit-button {
+    width: 100%;
+  }
+
+  .contact-form {
+    font-size: 0.8rem !important;
+  }
+
+  .description-cell {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* adjust the width to your liking */
+  }
+
+  .description {
+    display: block;
+    overflow-x: auto;
+  }
+
 }
 
 
+
 @media (max-width: 300px) {
+  
   .container {
     width: 100%;
+  }
+
+  .home {
+    background-position: center;
+    background-size: cover;
   }
 
   .contact-div {
     display: flex !important;
     flex-wrap: wrap !important;
-    flex-direction: column !important; /* Stack items vertically on smaller screens */
-    align-items: center !important; /* Center items horizontally */
+    flex-direction: column !important; 
+    align-items: center !important;
   }
-
+  
 }
 
-/* contact media queries */
 
+.product-actions {
+  width: 80%;
+  margin-left:  4.5rem;
+}

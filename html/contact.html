@@ -86,7 +86,7 @@
     </header>
       
     <main>
-      <section class="container">
+      <section class="container content">
         
         <div class="container">
                 <div class="row pt-4">
@@ -99,28 +99,28 @@
             </div>
             <div class="container contact-div">
                 <div class="row">
-                    <div class="col-6 mr-5">
+                    <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
 
-                        <div class="d-flex justify-content-center align-items-center">
+                        
                             <img src="https://github.com/caleb-okkers/classiqueOG/blob/main/images/download.jpeg?raw=true" alt="classic men" class="contact-img">
-                        </div>
+                        
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6 col-12">
                         <div class="container pb-5">
-                            <form class="mt-5" action="https://formspree.io/f/xgegrwwd" method="POST">
+                            <form class="mt-5 contact-form" action="https://formspree.io/f/xgegrwwd" method="POST">
                                 <div class="contact-label-div mb-3">
-                                    <label for="name" class="form-label contact-label">Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                    <label for="name" class="form-label contact-label  contact-form">Name</label>
+                                    <input type="text" class="form-control  contact-form" id="name" placeholder="Enter your name"
                                         name="name" required>
                                 </div>
                                 <div class="contact-label-div mb-3">
-                                    <label for="email" class="form-label contact-label">Email address</label>
-                                    <input type="email" class="form-control contact-form" id="email" placeholder="name@example.com"
+                                    <label for="email" class="form-label contact-label  contact-form">Email address</label>
+                                    <input type="email" class="form-control contact-form  contact-form" id="email" placeholder="name@example.com"
                                         name="email" required>
                                 </div>
                                 <div class="contact-label-div mb-3">
-                                    <label for="message" class="form-label contact-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="5"
+                                    <label for="message" class="form-label contact-label  contact-form">Message</label>
+                                    <textarea class="form-control  contact-form" id="message" rows="5"
                                         placeholder="Enter your message" name="message" required></textarea>
                                 </div>
                                 <button type="submit" class="btn custom-submit-button btn-outline-success"><span class="text-light">Submit</span></button>
@@ -129,27 +129,27 @@
                         <div class="container pt-5">
                           
                           <div class="row py-3">
-                            <div class="col auto px-5">
-                              <i class="fa-sharp fa-solid fa-phone fa-beat fa-2x" style="color: #6f300f;"></i>
+                            <div class="col-auto px-5">
+                              <i class="fa-sharp fa-solid fa-phone fa-2x" style="color: #6f300f;"></i>
                             </div>
                             <div class="col">
-                              <p class="contact-info">021 777 23773</p>
-                            </div>
-                          </div>
-                          <div class="row py-3 d-flex justify-content-center align-items-center">
-                            <div class="col auto px-5">
-                              <i class="fa-sharp fa-solid fa-envelope fa-beat fa-2x" style="color: #6f300f;"></i>
-                            </div>
-                            <div class="col">
-                              <p class="contact-info">info@classique.com</p>
+                              <p class="contact-info pt-1">021 777 23773</p>
                             </div>
                           </div>
                           <div class="row py-3">
-                            <div class="col auto px-5">
-                              <i class="fa-sharp fa-solid fa-location-dot fa-beat fa-2x" style="color: #6f300f;"></i>
+                            <div class="col-auto px-5">
+                              <i class="fa-sharp fa-solid fa-envelope fa-2x" style="color: #6f300f;"></i>
                             </div>
-                            <div class="col d-flex justify-content-center">
-                              <p class="contact-info">Shop 7223/7225 V & A Waterfront, Cape Town, 8003</p>
+                            <div class="col">
+                              <p class="contact-info pt-1">info@classique.com</p>
+                            </div>
+                          </div>
+                          <div class="row py-3 px-1">
+                            <div class="col-auto px-5">
+                              <i class="fa-sharp fa-solid fa-location-dot fa-2x" style="color: #6f300f;"></i>
+                            </div>
+                            <div class="col">
+                              <p class="contact-info pt-1">Shop 7223/7225 V & A Waterfront, Cape Town, 8003</p>
                             </div>
                           </div>
                         </div>
@@ -158,11 +158,11 @@
             </div>
 
       </section>
+      <footer>
+        <p>Copyright &copy; <span id="currentYear"></span> All Rights Reserved.</p>
+      </footer>  
     </main>
 
-    <footer>
-      <p>Copyright &copy; <span id="currentYear"></span> All Rights Reserved.</p>
-    </footer>  
 
     <script src="./script/code.js"></script>
     <script

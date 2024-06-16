@@ -4,7 +4,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 1,
                 name: 'Black Slim-Fit Suit 3-Piece',
-                category: 'suits',
+                category: 'suit',
                 color: 'Black',
                 description: 'This black slim-fit three-piece suit includes a blazer, waistcoat and trousers, made from a comfortable blend of 60% wool, 37% polyester and 3% elastane. This single-breasted blazer features top notch lapels, a two-button closure, a fully lined interior and double vents. Ideal for formal occasions, this suit requires dry cleaning.',
                 price: 8499.99,
@@ -13,7 +13,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 2,
                 name: 'Brown Slim-Fit Suit 3-Piece',
-                category: 'suits',
+                category: 'suit',
                 color: 'Brown',
                 description: 'This brown slim-fit three-piece suit includes a blazer, waistcoat and trousers, made from a comfortable blend of 60% wool, 37% polyester and 3% elastane. This single-breasted blazer features top notch lapels, a two-button closure, a fully lined interior and double vents. Ideal for formal occasions, this suit requires dry cleaning.',
                 price: 8999.99,
@@ -23,7 +23,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 3,
                 name: 'White Slim-Fit Suit 3-Piece',
-                category: 'suits',
+                category: 'suit',
                 color: 'White',
                 description: 'This white slim-fit three-piece suit includes a blazer, waistcoat and trousers, made from a comfortable blend of 60% wool, 37% polyester and 3% elastane. This single-breasted blazer features top notch lapels, a two-button closure, a fully lined interior and double vents. Ideal for formal occasions, this suit requires dry cleaning.',
                 price: 8999.99,
@@ -32,7 +32,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 4,
                 name: 'Green Slim-Fit Suit 3-Piece',
-                category: 'suits',
+                category: 'suit',
                 color: 'Green',
                 description: 'This green slim-fit three-piece suit includes a blazer, waistcoat and trousers, made from a comfortable blend of 60% wool, 37% polyester and 3% elastane. This single-breasted blazer features top notch lapels, a two-button closure, a fully lined interior and double vents. Ideal for formal occasions, this suit requires dry cleaning.',
                 price: 8999.99,
@@ -41,7 +41,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 5,
                 name: 'Grey Striped Slim-Fit Suit 3-Piece',
-                category: 'suits',
+                category: 'suit',
                 color: 'Grey',
                 description: 'This striped grey slim-fit three-piece suit includes a blazer, waistcoat and trousers, made from a comfortable blend of 60% wool, 30% polyester, 7% viscose and 3% elastane. This single-breasted blazer features peak lapels, a two-button closure, a fully lined interior and double vents. Perfect for formal occasions, this suit requires dry cleaning.',
                 price: 9499.99,
@@ -50,7 +50,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 6,
                 name: 'Navy Striped Slim-Fit Suit 3-Piece',
-                category: 'suits',
+                category: 'suit',
                 color: 'Navy',
                 description: 'This striped navy slim-fit three-piece suit includes a blazer, waistcoat and trousers, made from a comfortable blend of 60% wool, 30% polyester, 7% viscose and 3% elastane. This single-breasted blazer features peak lapels, a two-button closure, a fully lined interior and double vents. Perfect for formal occasions, this suit requires dry cleaning.',
                 price: 9499.99,
@@ -58,8 +58,8 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             },
             {
                 id: 7,
-                name: 'Black Double-Breasted Suit 2-Piece',
-                category: 'suits',
+                name: 'Black Double-Breasted Suit',
+                category: 'suit',
                 color: 'Black',
                 description: 'This black slim-fit two-piece suit includes a blazer, waistcoat and trousers, made from a blend of 73% polyester, 23% viscose and 4% elastane. The double-breasted blazer features peak lapels, six buttons, functioning buttoned cuffs, a fully lined interior and double vents. Perfect for formal occasions, this suit requires dry cleaning.',
                 price: 9999.99,
@@ -68,7 +68,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 8,
                 name: 'Brown Plaid Slim-Fit Suit 3-Piece',
-                category: 'suits',
+                category: 'suit',
                 color: 'Brown',
                 description: 'This brown plaid slim-fit three-piece suit includes a blazer, waistcoat and trousers, made from a blend of 73% polyester, 23% viscose and 4% elastane. This single-breasted blazer features peak lapels, a two-button closure, a fully lined interior and double vents. Perfect for formal occasions, this suit requires dry cleaning.',
                 price: 9999.99,
@@ -76,8 +76,8 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             },
             {
                 id: 9,
-                name: 'Bordeaux Double-Breasted Suit 2-Piece',
-                category: 'suits',
+                name: 'Bordeaux Double-Breasted Suit',
+                category: 'suit',
                 color: 'Bordeaux',
                 description: 'This bordeaux slim-fit two-piece suit includes a blazer, waistcoat and trousers, made from a blend of 73% polyester, 23% viscose and 4% elastane. The double-breasted blazer features peak lapels, six buttons, functioning buttoned cuffs, a fully lined interior and double vents. Perfect for formal occasions, this suit requires dry cleaning.',
                 price: 9999.99,
@@ -87,7 +87,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 10,
                 name: 'White Slim-Fit Shirt',
-                category: 'essentials',
+                category: 'shirt',
                 color: 'White',
                 description: 'This slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a classic white color. For optimal care, it requires dry cleaning only.',
                 price: 1499.99,
@@ -96,7 +96,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 11,
                 name: 'Navy Slim-Fit Shirt',
-                category: 'essentials',
+                category: 'shirt',
                 color: 'Navy',
                 description: 'This slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a classic navy color. For optimal care, it requires dry cleaning only.',
                 price: 1499.99,
@@ -105,7 +105,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 12,
                 name: 'Black Slim-Fit Shirt',
-                category: 'essentials',
+                category: 'shirt',
                 color: 'Black',
                 description: 'This slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a classic black color. For optimal care, it requires dry cleaning only.',
                 price: 1499.99,
@@ -114,7 +114,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 13,
                 name: 'Camel Slim-Fit Shirt',
-                category: 'essentials',
+                category: 'shirt',
                 color: 'Camel',
                 description: 'This slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a warm camel color. For optimal care, it requires dry cleaning only.',
                 price: 1499.99,
@@ -123,7 +123,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 14,
                 name: 'Sky-Blue Slim-Fit Shirt',
-                category: 'essentials',
+                category: 'shirt',
                 color: 'Sky-Blue',
                 description: 'This slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a soft sky-blue color. For optimal care, it requires dry cleaning only.',
                 price: 1499.99,
@@ -132,7 +132,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 15,
                 name: 'White Tuxedo Slim-Fit Shirt',
-                category: 'essentials',
+                category: 'shirt',
                 color: 'White',
                 description: 'This tuxedo slim-fit shirt, crafted from a blend of 80% cotton and 20% polyester, comes in a classic white color. For optimal care, it requires dry cleaning only.',
                 price: 1499.99,
@@ -141,7 +141,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 16,
                 name: 'Black Tie 9cm',
-                category: 'accessories',
+                category: 'tie',
                 color: 'Black',
                 description: 'This Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
                 price: 1499.99,
@@ -150,7 +150,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 17,
                 name: 'Brown Tie 9cm',
-                category: 'accessories',
+                category: 'tie',
                 color: 'Brown',
                 description: 'This Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
                 price: 1499.99,
@@ -159,7 +159,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 18,
                 name: 'Green Tie 9cm',
-                category: 'accessories',
+                category: 'tie',
                 color: 'Green',
                 description: 'This Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
                 price: 1499.99,
@@ -168,7 +168,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 19,
                 name: 'Navy Striped Tie 9cm',
-                category: 'accessories',
+                category: 'tie',
                 color: 'Navy Striped',
                 description: 'This striped Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
                 price: 1499.99,
@@ -177,7 +177,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 20,
                 name: 'Bordeaux Polka-Dot Tie 9cm',
-                category: 'accessories',
+                category: 'tie',
                 color: 'Bordeaux',
                 description: 'This polka-dot Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
                 price: 1499.99,
@@ -186,7 +186,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             {
                 id: 21,
                 name: 'Navy & Salmon Tie 9cm',
-                category: 'accessories',
+                category: 'tie',
                 color: 'Navy & Salmon',
                 description: 'This striped Jacquard tie, crafted entirely from 100% polyester, features a sleek 5.5 cm (2.1 in) width, combining durability with a sophisticated texture for formal elegance.',
                 price: 1499.99,
@@ -199,7 +199,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
     ))
 
 
-let adjectives = ['timeless', 'elegant', 'classic', 'old fashioned', 'desire', 'suave', 'like Caleb']
+let adjectives = ['timeless', 'old fashioned', 'elegant', 'classic', 'desire', 'suave']
 let currentIndex = 0
 
 function changedAdjective () {
@@ -225,3 +225,13 @@ setInterval(changedAdjective, 1500)
 //         ripple.style.top = `${y}px`;
 //     });
 // });
+
+
+document.addEventListener('scroll', function() {
+    const homeNav = document.getElementById('#home-nav');
+    if (window.scrollY > 50) {
+        homeNav.classList.add('scrolled');
+    } else {
+        homeNav.classList.remove('scrolled');
+    }
+  });
