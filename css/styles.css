@@ -192,7 +192,9 @@ footer p {
 
 
 .offcanvas {
-  background-color: rgb(185, 157, 101, 0.5) !important;
+  /* background-color: rgb(185, 157, 101, 0.5) !important; */
+  background-color: #fff !important;
+
 }
 
 .offcanvas-title {
@@ -215,14 +217,21 @@ footer p {
   color: rgb(111, 48, 15) !important;
 }
 
+.nav-item {
+  padding-left: 1.8rem;
+}
+
 
 .nav-link {
-  color: #fff !important;
+  /* color: #fff !important; */
+  color: rgb(111, 48, 15)  !important;
   /* background-color: rgba(111, 48, 15, 0.2) !important; */
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 2rem;
-  padding-left: 20px;
+  /* margin-top: 5px;
+  margin-bottom: 5px; */
+  font-size: 1.2rem !important;
+  padding-left: 50px;
+  margin: 8px auto !important;
+  text-align: center;
 }
 
 .nav-link:hover {
